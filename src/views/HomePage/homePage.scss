@@ -1,0 +1,132 @@
+@import '../../utils/mixin';
+@import '../../utils/common.scss';
+.wrap{
+    width:100%;
+    height: 100%;
+    font-size:  pxTorem(12px);
+    overflow-y: scroll;
+    .header{
+        width: 100%;
+        height: pxTorem(65px);
+        .top{
+            width: 100%;
+            height: pxTorem(44px);
+            display: flex;
+            justify-content: space-around;
+            font-size:  pxTorem(15px);
+            line-height:  pxTorem(15px);
+            align-items: center;
+            
+         input{
+             width: pxTorem(170px);
+             height:  pxTorem(25px);
+             background: #cccccc;
+             border-radius: pxTorem(5px);
+             font-size:  pxTorem(12px);
+             text-align: center;
+         }
+         .btn{
+            color: #B4282d;
+            font-size:  pxTorem(12px);
+            border-radius: pxTorem(12px);
+            border: pxTorem(12px);
+        }
+        img{
+            width: pxTorem(60px);
+            height: pxTorem(18px);
+        }
+        }
+        .title{
+            width: 100%;
+            height:  pxTorem(25px);
+            display: flex;
+            margin-top: pxTorem(-7px);
+            align-items: center;
+            .left{
+                width: 90%;
+                font-size:  pxTorem(12px);
+          
+            ul{
+                display: flex;
+                li{
+                    margin-left: pxTorem(5px);
+                }
+            }
+            }
+            .right{
+                width: 10%;
+                img{
+                    width: pxTorem(15px);
+                    height: pxTorem(15px);
+                    margin-top: pxTorem(5px);
+                }
+            }
+        }
+       
+    }
+  .phone{
+    width: 100%;
+    height: pxTorem(157px);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .titles{
+    margin-top: pxTorem(10px);
+    width: 100%;
+    height: pxTorem(30px);
+   ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+    li{
+        display: flex;
+        span{
+            display: inline-block;
+            font-size: pxTorem(10px);
+        }
+        img{
+            width: pxTorem(14px);
+            height: pxTorem(14px);
+           
+        }    
+      }
+   }
+
+  }
+.listOne{
+  width: 100%;
+  height: pxTorem(170px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  dl{
+    width: 18%;
+    margin-top: pxTorem(5px);
+    margin-left: pxTorem(5px);
+   
+    dt{
+      width: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd{
+        font-size: pxTorem(10px);
+        margin-left: pxTorem(5px);
+    }
+
+  }
+}
+.imgss{
+  width: pxTorem(320px);
+  height: pxTorem(60px);
+  margin-top: pxTorem(10px);
+  img{
+    width: 100%;
+    height: pxTorem(50px);
+  }
+}
+}

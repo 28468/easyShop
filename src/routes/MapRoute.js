@@ -1,5 +1,6 @@
 import React from 'react'
 import {Switch,Route,Redirect} from 'react-router-dom'
+import Cookie from 'js-cookie';
 const MapRoute = props=>(
     <Switch>
         {
@@ -7,7 +8,12 @@ const MapRoute = props=>(
                 item.path?(
                     <Route key={item.path} path={item.path} 
                     render={
-                        props=>{             
+                        props=>{  
+                             if(item.flag){
+                                       if(!Cookie.get('x-nideshop-token')){
+                                           return <Redirect to='/login'></Redirect>
+                                       }
+                                   }           
                            return <item.component {...props} route={item.children}></item.component>
                         }
                     }>

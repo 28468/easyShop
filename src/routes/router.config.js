@@ -32,11 +32,13 @@ const route = [
             {
                 path:'/shopCar',
                 component:ShopCar,
+            
                 
             },
             {
                 path:'/wode',
                 component:Wode,
+                flag:true,
                 
             },
             {
