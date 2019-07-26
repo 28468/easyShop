@@ -1,5 +1,6 @@
 @import '../../utils/mixin';
 @import '../../utils/common.scss';
+
 .wrap{
     width:100%;
     height: 100%;
@@ -7,7 +8,7 @@
     flex-direction: column;
 }
 .logo{
-    margin-top: pxTorem(40px);
+    margin-top: pxTorem(40px); 
     width: 100%;
     height: pxTorem(40px);
     display: flex;
@@ -49,11 +50,11 @@
     width: 100%;
     height: pxTorem(30px);
     background: #B4282D;
-
+   margin-top: pxTorem(10px);
     border: 0;
     color: #cccccc;
 }
-.content .btn1{
+.content .loginbtn1{
     background: #ffffff;
     border: 1px solid #B4282D;
     color: #B4282D;

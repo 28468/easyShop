@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './homePage.scss'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+
 class HomePage extends Component {
     constructor(props) {
         super(props);

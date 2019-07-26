@@ -13,7 +13,7 @@ const MapRoute = props=>(
                                        if(!Cookie.get('x-nideshop-token')){
                                            return <Redirect to='/login'></Redirect>
                                        }
-                                   }           
+                                  }           
                            return <item.component {...props} route={item.children}></item.component>
                         }
                     }>
