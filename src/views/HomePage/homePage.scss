@@ -1,0 +1,196 @@
+@import '../../utils/mixin';
+@import '../../utils/common.scss';
+.wrap{
+    width:100%;
+    height: 100%;
+    font-size:  pxTorem(12px);
+    overflow-y: scroll;
+    .header{
+        width: 100%;
+        height: pxTorem(65px);
+        .top{
+            width: 100%;
+            height: pxTorem(44px);
+            display: flex;
+            justify-content: space-around;
+            font-size:  pxTorem(15px);
+            line-height:  pxTorem(15px);
+            align-items: center;
+            
+         input{
+             width: pxTorem(170px);
+             height:  pxTorem(25px);
+             background: #eee;
+             border-radius: pxTorem(5px);
+             font-size:  pxTorem(12px);
+             text-align: center;
+         }
+         .btn{
+            color: #B4282d;
+            font-size:  pxTorem(12px);
+            border-radius: pxTorem(12px);
+            border: pxTorem(12px);
+        }
+        img{
+            width: pxTorem(60px);
+            height: pxTorem(18px);
+        }
+        }
+        .title{
+            width: 100%;
+            height:  pxTorem(25px);
+            display: flex;
+            margin-top: pxTorem(-7px);
+            align-items: center;
+            .left{
+                width: 90%;
+                font-size:  pxTorem(12px);
+          
+            ul{
+                display: flex;
+                li{
+                    margin-left: pxTorem(5px);
+                }
+            }
+            }
+            .right{
+                width: 10%;
+                img{
+                    width: pxTorem(15px);
+                    height: pxTorem(15px);
+                    margin-top: pxTorem(5px);
+                }
+            }
+        }
+       
+    }
+  .phone{
+    width: 100%;
+    height: pxTorem(157px);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .titles{
+    margin-top: pxTorem(10px);
+    width: 100%;
+    height: pxTorem(30px);
+   ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+    li{
+        display: flex;
+        span{
+            display: inline-block;
+            font-size: pxTorem(10px);
+        }
+        img{
+            width: pxTorem(14px);
+            height: pxTorem(14px);
+           
+        }    
+      }
+   }
+
+  }
+.listOne{
+  width: 100%;
+  height: pxTorem(170px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+text-align: center;
+margin: 0 auto;
+  dl{
+    width: 18%;
+    margin-top: pxTorem(5px);
+    margin-left: pxTorem(5px);
+   
+    dt{
+      width: 100%;
+      
+      img{
+        width: 50%;
+        height: 50%;
+      }
+    }
+    dd{
+        font-size: pxTorem(10px);
+        margin-left: pxTorem(5px);
+    }
+
+  }
+}
+.syimgtitle{
+    width: 100%;
+    height: pxTorem(350px);
+    margin-top: pxTorem(10px);
+    border-top: pxTorem(5px) solid #eee;
+    border-bottom: pxTorem(5px) solid #eee;
+    padding:  pxTorem(15px) 0;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .syyouhui{
+        margin-top: pxTorem(15px);
+        width: 100%;
+        height: pxTorem(160px);
+        display: flex;
+        justify-content: space-around;
+        background: #dfe4e8;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+        dt{
+        
+        }
+        dd{
+            img{
+                width: 100%;
+                height: 50%;
+            }
+        }
+      }
+    
+    }
+}
+
+.syimgtitles{
+    width: 100%;
+    height: pxTorem(480px);
+    margin-top: pxTorem(30px);
+    padding:  pxTorem(15px) 0;
+    text-align: center;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .sytuwen{
+        width: 100%;
+        height: pxTorem(260px);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+     margin-top: pxTorem(5px);
+        dt{
+            img{
+                margin-top: pxTorem(-20px);
+                width: 100%;
+                height: 10%;
+            }
+        }
+        dd{
+            margin-top: pxTorem(-20px);
+        }
+      }
+    
+    }
+}
+}
