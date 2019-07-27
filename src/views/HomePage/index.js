@@ -1,8 +1,9 @@
+
 import React, { Component } from 'react'
 import './homePage.scss'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
-
+import '../../utils/fonts/iconfont.css'
 class HomePage extends Component {
     constructor(props) {
         super(props);
@@ -16,28 +17,8 @@ class HomePage extends Component {
     }
     render() {
         return (
-            <div className="wrap">
-                <div className="header">
-                    <div className="top">
-                        <span><img src="https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-a90bdaae6b.png" alt="" /></span>
-                        <span><input type="text" placeholder="搜索商品，总21615件商品" /></span>
-                        <span className="btn">登录</span>
-                    </div>
-                    <div className="title">
-                        <div className="left">
-                            <ul>
-                                <li>推荐</li>
-                                <li>居家生活</li>
-                                <li>服饰鞋包</li>
-                                <li>美食酒水</li>
-                                <li>个护清洁</li>
-                            </ul>
-                        </div>
-                        <div className="right">
-                            <img src="https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-down-3-799ded53ea.png" alt="" />
-                        </div>
-                    </div>
-                </div>
+            <div className='wrap'>
+            <div className="symain">
                 <div className="phone">
                     <div className="swiper-container banner">
                         <div className="swiper-wrapper">
@@ -50,68 +31,232 @@ class HomePage extends Component {
                     </div>
 
                 </div>
-                <div className="titles">
-                    <ul>
-                        <li><img className="imgs" src="https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png" alt="" />
-                            <span>网易自营品牌</span>
-                        </li>
-                        <li><img className="imgs" src="https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png" alt="" />
-                            <span>30天无忧退货</span>
-                        </li>
-                        <li><img className="imgs" src="https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png" alt="" />
-                            <span >48小时极速退款</span>
-                        </li>
-                    </ul>
-
-                </div>
+            
                 <div className="listOne">
+                   
                     <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
+                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
+                        <dd>居家</dd>
                     </dl>
                     <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
+                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
+                        <dd>居家</dd>
                     </dl>
                     <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
+                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
+                        <dd>居家</dd>
                     </dl>
                     <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
+                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
+                        <dd>居家</dd>
                     </dl>
                     <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" alt="" /></dt>
-                        <dd>新品首发</dd>
+                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
+                        <dd>居家</dd>
                     </dl>
                 </div>
-                <div className="imgss">
-                    <img src="https://yanxuan.nosdn.127.net/20d820081b08857c9da8417160cc79a3.gif" alt="" />
+               <div className="syimgtitle">
+                <span>品牌制造商直供</span>
+                <div className="syyouhui">
+                  
+                    <dl>
+                        <dt>新人专享礼包</dt>
+                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
+                    </dl>
+                    <dl>
+                        <dt>新人专享礼包</dt>
+                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
+                    </dl>
+                    <dl>
+                        <dt>新人专享礼包</dt>
+                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
+                    </dl>
+                    <dl>
+                        <dt>新人专享礼包</dt>
+                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
+                    </dl>
+                    </div>
+           
+               </div>
+               <div className="syimgtitles">
+                <span>新品首发</span>
+                <div className="sytuwen">
+                <dl>
+                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
+                        <dd>蔓越莓曲奇200克</dd>
+                            <b>￥36元</b>
+                    </dl>
+                    <dl>
+                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
+                        <dd>蔓越莓曲奇200克</dd>
+                        <b>￥36元</b>
+                    </dl>
+                    <dl>
+                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
+                        <dd>蔓越莓曲奇200克</dd>
+                        <b>￥36元</b>
+                    </dl>
+                    <dl>
+                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
+                        <dd>蔓越莓曲奇200克</dd>
+                        <b>￥36元</b>
+                    </dl>
+                    </div>
+           
+               </div>
+               <div>
+                   <div className="syrenqi">
+                <div className="sytop">
+                <span>人气推荐</span>
                 </div>
+                <div className="syboxs">
+                <div className="syshuang">
+                <div className="sy_left">
+                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
+                </div>
+                <div className="sy_right">
+                <p>双攻揉面蚕丝被 空调被</p>
+                <p>以及桑蚕丝</p>
+                <p>￥699</p>
+                </div>
+                </div>
+                <div className="syshuang">
+                <div className="sy_left">
+                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
+                </div>
+                <div className="sy_right">
+                <p>双攻揉面蚕丝被 空调被</p>
+                <p>以及桑蚕丝</p>
+                <p>￥699</p>
+                </div>
+                </div>
+                <div className="syshuang">
+                <div className="sy_left">
+                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
+                </div>
+                <div className="sy_right">
+                <p>双攻揉面蚕丝被 空调被</p>
+                <p>以及桑蚕丝</p>
+                <p>￥699</p>
+                </div>
+                </div>
+                </div>
+                   </div>
+               </div>
+               <div className="phones">
+               <div className="sytop">
+                <span>专题精选</span>
+                </div>
+               <div className="swiper-container banner">
+                        <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                                <img src="https://yanxuan.nosdn.127.net/0b6674a2710f2ffcc63ad16a1bc2c0c7.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
+                            </div><div className="swiper-slide">
+                                <img src="https://yanxuan.nosdn.127.net/51a6e81d95eb24b75f5eb7a435ce28e2.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
+                            </div>
+                        </div>
+                    </div>
+               </div>
+
+               <div className='syrishi'>
+               <div className="sytops">
+                <span>居家</span>
+                </div>
+               <div className="sy_xiangzi">
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>  <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                 
+                </dl>
+                
+               </div>
+               </div>
+               
+               <div className='syrishi'>
+               <div className="sytops">
+                <span>餐厨</span>
+                </div>
+               <div className="sy_xiangzi">
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+                <dl>
+                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
+                    <dd>日式和风懒人沙发</dd>
+                    <p>￥599</p>
+                </dl>
+               </div>
+               </div>
             </div>
+    </div>
         );
     }
 }
 
-export default HomePage;
+export default HomePage;  

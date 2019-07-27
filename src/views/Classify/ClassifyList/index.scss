@@ -16,6 +16,9 @@
     padding:0 pxTorem(10px);
     box-sizing: border-box;
     align-items: center;
+    p{
+        font-size: pxTorem(14px)
+    }
 }
 .list-scroll{
     width: pxTorem(720px);
@@ -46,6 +49,7 @@
     width: 100%;
     height: pxTorem(80px);
     background: #eeeeee;
+    font-size: pxTorem(14px);
    div:nth-child(1){
        width: 100%;
        height: pxTorem(40px);

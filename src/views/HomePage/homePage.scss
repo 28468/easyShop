@@ -1,69 +1,14 @@
 @import '../../utils/mixin';
 @import '../../utils/common.scss';
-.wrap{
+.symain{
     width:100%;
     height: 100%;
     font-size:  pxTorem(12px);
     overflow-y: scroll;
-    .header{
-        width: 100%;
-        height: pxTorem(65px);
-        .top{
-            width: 100%;
-            height: pxTorem(44px);
-            display: flex;
-            justify-content: space-around;
-            font-size:  pxTorem(15px);
-            line-height:  pxTorem(15px);
-            align-items: center;
-            
-         input{
-             width: pxTorem(170px);
-             height:  pxTorem(25px);
-             background: #eee;
-             border-radius: pxTorem(5px);
-             font-size:  pxTorem(12px);
-             text-align: center;
-         }
-         .btn{
-            color: #B4282d;
-            font-size:  pxTorem(12px);
-            border-radius: pxTorem(12px);
-            border: pxTorem(12px);
-        }
-        img{
-            width: pxTorem(60px);
-            height: pxTorem(18px);
-        }
-        }
-        .title{
-            width: 100%;
-            height:  pxTorem(25px);
-            display: flex;
-            margin-top: pxTorem(-7px);
-            align-items: center;
-            .left{
-                width: 90%;
-                font-size:  pxTorem(12px);
-          
-            ul{
-                display: flex;
-                li{
-                    margin-left: pxTorem(5px);
-                }
-            }
-            }
-            .right{
-                width: 10%;
-                img{
-                    width: pxTorem(15px);
-                    height: pxTorem(15px);
-                    margin-top: pxTorem(5px);
-                }
-            }
-        }
-       
-    }
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
   .phone{
     width: 100%;
     height: pxTorem(157px);
@@ -101,6 +46,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+text-align: center;
+margin: 0 auto;
   dl{
     width: 18%;
     margin-top: pxTorem(5px);
@@ -108,9 +55,10 @@
    
     dt{
       width: 100%;
+      
       img{
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
       }
     }
     dd{
@@ -120,13 +68,163 @@
 
   }
 }
-.imgss{
-  width: pxTorem(320px);
-  height: pxTorem(60px);
-  margin-top: pxTorem(10px);
-  img{
+.syimgtitle{
     width: 100%;
-    height: pxTorem(50px);
+    height: pxTorem(350px);
+    margin-top: pxTorem(10px);
+    border-top: pxTorem(5px) solid #eee;
+    border-bottom: pxTorem(5px) solid #eee;
+    padding:  pxTorem(15px) 0;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .syyouhui{
+        margin-top: pxTorem(15px);
+        width: 100%;
+        height: pxTorem(160px);
+        display: flex;
+        justify-content: space-around;
+        background: #dfe4e8;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+    
+        dd{
+            img{
+                width: 100%;
+                height: 50%;
+            }
+        }
+      }
+    
+    }
+}
+
+.syimgtitles{
+    width: 100%;
+    height: pxTorem(480px);
+    margin-top: pxTorem(30px);
+    padding:  pxTorem(15px) 0;
+    text-align: center;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .sytuwen{
+        width: 100%;
+        height: pxTorem(260px);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+     margin-top: pxTorem(5px);
+        dt{
+            img{
+                margin-top: pxTorem(-20px);
+                width: 100%;
+                height: 10%;
+            }
+        }
+        dd{
+            margin-top: pxTorem(-20px);
+        }
+      }
+    
+    }
+}
+.syrenqi{
+    width: 100%;
+    border-top: pxTorem(5px) solid #eee;
+    margin-top: pxTorem(15px);
+    .sytop{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding:  pxTorem(10px) 0;
+        border-bottom: pxTorem(2px) solid #eee;
+        margin-top:  pxTorem(15px);
+        span{
+            text-align: center;
+           
+        }
+    }
+}
+.syboxs{
+    width: 100%;
+  
+    .syshuang{
+        display: flex;
+        border-bottom: pxTorem(2px) solid #eee;
+        .sy_left{
+            width: 40%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .sy_right{
+            width: 60%;
+            p{
+             margin-top:  pxTorem(15px);      
+            }
+        }
+    }
+}
+.phones{
+    width: 100%;
+    height: pxTorem(157px);
+    margin-top:  pxTorem(15px); 
+    .sytop{
+        text-align: center;
+        span{
+            text-align: center;
+           
+        }
+    }
+    img{
+        margin-top: pxTorem(12px);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .syrishi{
+      width: 100%;
+      margin-top: pxTorem(12px);
+      .sytops{
+          width: 100%;
+          height:  pxTorem(30px);
+          line-height:  pxTorem(30px);
+          background: #eee;
+          text-align: center;    
+      }
+  }
+  .sy_xiangzi{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      dl{
+          width: 50%;
+          dt{
+              
+              img{
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+          dd{
+              margin-top:  pxTorem(-20px);
+              text-align: center;
+          }
+          p{
+            text-align: center;
+            color: red;
+          }
+      }
   }
 }
-}
+
