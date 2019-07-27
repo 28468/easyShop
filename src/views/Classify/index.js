@@ -10,11 +10,15 @@ class Classify extends Component {
         super(props);
         this.state = {};
     }
+    goto = (id,item) => {
+        console.log(  this.props)
+       this.props.history.push({pathname:`/classifylist/${id}`,params:item})
+    }
     componentDidMount() {
         this.props.classify.getList()
     }
     render() {
-     
+
         return (
             <div className='wrap'>
                 <div className="fl-header">
@@ -43,14 +47,14 @@ class Classify extends Component {
                             <div className="fl-right-con">
                                 {
                                     this.props.classify.rightList && this.props.classify.rightList.subCategoryList.map((item, index) => {
-                                        return <dl className="fl-right-list" key={item.id}>
-                                                    <dt>
-                                                        <img src={item.wap_banner_url} alt="" />
-                                                    </dt>
-                                                    <dd>
-                                                        <span>{item.name}</span>
-                                                    </dd>
-                                               </dl>
+                                        return <dl className="fl-right-list" key={item.id} onClick={() => this.goto(item.id,item)}>
+                                            <dt>
+                                                <img src={item.wap_banner_url} alt="" />
+                                            </dt>
+                                            <dd>
+                                                <span>{item.name}</span>
+                                            </dd>
+                                        </dl>
                                     })
                                 }
                             </div>
@@ -61,6 +65,7 @@ class Classify extends Component {
             </div>
         );
     }
+
 }
 
 export default Classify;
