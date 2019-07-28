@@ -1,0 +1,14 @@
+@import '../../../../utils/mixin';
+@import '../../../../utils/common.scss';
+.xq-header{
+    width: 100%;
+    height: pxTorem(30px);
+    display: flex;
+    justify-content: space-between;
+    padding:0 pxTorem(10px);
+    box-sizing: border-box;
+    align-items: center;
+    p{
+        font-size: pxTorem(14px)
+    }
+}

@@ -11,14 +11,22 @@ class ClassifyList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            name:'',
+            front_name:''
+        };
     }
-    goDetail = (id, item) => {
-        console.log(id,item)
-        // this.props.history.push({ pathname: `/classifylist/${id}`, params: item })
+    goDetail = (id) => {
+        console.log(id)
+         this.props.history.push({ pathname: `/listDetail/${id}`})
     }
     componentDidMount() {
-        this.props.classify.getClassifyList(this.props.location.params.id)
+       const id =  window.localStorage.getItem('itemId')
+       this.setState({
+           name:window.localStorage.getItem('name'),
+           front_name:window.localStorage.getItem('front_name')
+       })
+        this.props.classify.getClassifyList(id)
         new BScroll(".list-scroll", {
             scrolly: true,
             probeType: 2,
@@ -44,8 +52,8 @@ class ClassifyList extends Component {
                 </div>
                 <div className="list-main">
                     <div className="list-main-top">
-                        <div>{this.props.location.params.name}</div>
-                        <div>{this.props.location.params.front_name}</div>
+                        <div>{this.state.name}</div>
+                        <div>{this.state.front_name}</div>
                     </div>
                     <div className="list-main-con">
                         {

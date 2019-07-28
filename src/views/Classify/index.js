@@ -10,15 +10,17 @@ class Classify extends Component {
         super(props);
         this.state = {};
     }
-    goto = (id, item) => {
-        console.log(this.props)
-        this.props.history.push({ pathname: `/classifylist/${id}`, params: item })
+    goto = (item) => {
+        console.log(item.name,item.front_name)
+         window.localStorage.setItem('itemId',item.id)
+         window.localStorage.setItem('name',item.name)
+         window.localStorage.setItem('front_name',item.front_name)
+        this.props.history.push({ pathname: `/classifylist/${item.id}`, params: item })
     }
     componentDidMount() {
         this.props.classify.getList()
     }
     render() {
-
         return (
             <div className='wrap'>
                 <div className="fl-header">
@@ -47,7 +49,7 @@ class Classify extends Component {
                             <div className="fl-right-con">
                                 {
                                     this.props.classify.rightList && this.props.classify.rightList.subCategoryList.map((item, index) => {
-                                        return <dl className="fl-right-list" key={item.id} onClick={() => this.goto(item.id, item)}>
+                                        return <dl className="fl-right-list" key={item.id} onClick={() => this.goto(item)}>
                                             <dt>
                                                 <img src={item.wap_banner_url} alt="" />
                                             </dt>
