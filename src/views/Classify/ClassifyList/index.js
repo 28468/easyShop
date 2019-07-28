@@ -8,12 +8,16 @@ import { inject, observer } from 'mobx-react';
 @inject('classify')
 @observer
 class ClassifyList extends Component {
+
     constructor(props) {
         super(props);
         this.state = {};
     }
+    goDetail = (id, item) => {
+        console.log(id,item)
+        // this.props.history.push({ pathname: `/classifylist/${id}`, params: item })
+    }
     componentDidMount() {
-
         this.props.classify.getClassifyList(this.props.location.params.id)
         new BScroll(".list-scroll", {
             scrolly: true,
@@ -33,7 +37,7 @@ class ClassifyList extends Component {
                     <div>
                         {
                             this.props.classify.titleList && this.props.classify.titleList.map((item, index) => {
-                                return <span key={item.id}>{item.name}  </span>
+                                return <span key={item.id} className={item.checked ? 'active' : null} onClick={() => this.props.classify.addListClass(item)}>{item.name}</span>
                             })
                         }
                     </div>
@@ -46,7 +50,7 @@ class ClassifyList extends Component {
                     <div className="list-main-con">
                         {
                             this.props.classify.conList && this.props.classify.conList.map((item, index) => {
-                                return <div className="list-main-list" key={item.id}>
+                                return <div className="list-main-list" key={item.id}  onClick={() => this.goDetail(item.id, item)}>
                                             <img src={item.list_pic_url} alt="" />
                                             <p>{item.name}</p>
                                             <span>￥{item.retail_price}</span>
