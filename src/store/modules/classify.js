@@ -1,14 +1,14 @@
 import { observable, action } from "mobx";
-import { classify, clickClassify, classifyList } from '../../servicer';
+import { classify, clickClassify, classifyList ,getDetail} from '../../servicer';
 export default class Classifys {
     // @observable 修饰属性
     @observable leftList = "";
     @observable rightList = "";
     @observable titleList = "";//列表标题数据
     @observable conList = "";//列表内容数据
+    @observable detailList = "";//商品详情数据
     @action async getList() {
         const data = await classify() 
-        
         this.leftList = data.data.categoryList
         this.leftList[0].type = 1;
         this.rightList = data.data.currentCategory
@@ -37,7 +37,12 @@ export default class Classifys {
        item.checked = !item.checked;
        const data = await classifyList(item.id) 
        this.conList = data.data.goodsList
- 
+    }
+    //根据ID获取商品详情
+    @action async getDetailList(id) {
+       const data = await getDetail(id) 
+       console.log(data.data)
+       this.detailList = data.data
     }
 
 }
