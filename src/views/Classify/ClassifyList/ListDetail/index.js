@@ -14,11 +14,7 @@ class ListDetail extends Component {
             DialogFalg:false
         };
     }
-    goDialog = () =>{
-   this.setState({
-    DialogFalg:true
-   })
-    }
+  
     goBack = () => {
         this.props.history.push({ pathname: `/classifylist/${window.localStorage.getItem('itemId')}` })
     }
@@ -78,7 +74,7 @@ class ListDetail extends Component {
                                 (<span>￥{this.props.classify.detailList.info.retail_price}</span>) : (null)
                         }
                     </div>
-                    <div className="xq-main-goodSize"  onClick={() => this.goDialog()}>
+                    <div className="xq-main-goodSize"  onClick={() =>  this.props.classify.showDialog()}>
                         <p className='gooodSize-num'>x <span>0</span></p>
                         <p >选择规则 &nbsp;></p>
                     </div>
@@ -98,7 +94,7 @@ class ListDetail extends Component {
                     <p className='gobuy'>立即购买</p>
                 </div>
                 {
-                    this.state.DialogFalg ?(
+                    this.props.classify.DialogFalg ?(
                         <Dialog props={this.props.classify.detailList}></Dialog>
                     ):(null)
                 }

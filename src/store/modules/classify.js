@@ -7,6 +7,8 @@ export default class Classifys {
     @observable titleList = "";//列表标题数据
     @observable conList = "";//列表内容数据
     @observable detailList = "";//商品详情数据
+    @observable DialogFalg = false;//控制dialog的开关变量
+    @observable num = 0;//dialog里的数量
     @action async getList() {
         const data = await classify() 
         this.leftList = data.data.categoryList
@@ -43,6 +45,14 @@ export default class Classifys {
        const data = await getDetail(id) 
        console.log(data.data)
        this.detailList = data.data
+    }
+    //显示dialog
+    @action showDialog(){
+        this.DialogFalg = true;
+    }
+    //显示关闭
+    @action closeDialog(){
+        this.DialogFalg =false;
     }
 
 }

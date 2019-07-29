@@ -1,7 +1,7 @@
 
 
 import axios from "axios";
-import {getCookie} from "./index"
+import {getCookie} from "./index" 
 
 const service=axios.create({
   // baseURL: /jasonandjay.com/.test(window.location.host)?'https://exam.jasonandjay.com':'http://169.254.12.168:7001/',

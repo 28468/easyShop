@@ -10,7 +10,7 @@ class ShopCar extends Component {
     }
     componentDidMount() {
         console.log(this.props.props)
-        // this.props.classify.getDetailList(this.props.match.params.id)
+        console.log(this.props.classify.DialogFalg)
 
     }
     render() {
@@ -30,10 +30,10 @@ class ShopCar extends Component {
                         <p>库存：<span>{this.props.props.info.goods_number}</span><span>件</span></p>
                         <p>已选择：</p>
                     </div>
-                    <span className='dialog-del' >x</span>
+                    <span className='dialog-del' onClick={() =>  this.props.classify.closeDialog()}>x</span>
                 </div>
                 <div className="dialog-nums">
-                    <div><span>-</span> <p>0</p>  <span>+</span></div>
+                    <div><span>-</span><p>0</p><span>+</span></div>
                 </div>
                 <div className="dialog-foot">
                     <p>加入购物车</p>
