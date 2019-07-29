@@ -40,7 +40,7 @@
     }
     .xq-main-title{
         width: 100%;
-        height: pxTorem(100px);
+        height: pxTorem(80px);
         border-bottom: pxTorem(1px) solid #cccccc;
         padding: pxTorem(10px) 0;
         text-align: center;
@@ -57,6 +57,21 @@
             color: red;
         }
     }
+    .xq-main-goodSize{
+        width: 100%;
+        height: pxTorem(60px);
+        display: flex;
+        align-items: center;
+        border-bottom: pxTorem(5px) solid #eeeeee;
+        justify-content: flex-end;
+        p{
+            font-size: pxTorem(14px);
+            margin-right: pxTorem(10px);
+        }
+        .gooodSize-num{
+            color: red;
+        }
+    }
 }
 .xq-footer{
     width: 100%;
@@ -64,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+ 
     p{
         flex: 1;
         height: pxTorem(40px);

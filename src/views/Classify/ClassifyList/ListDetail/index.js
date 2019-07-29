@@ -4,14 +4,20 @@ import '../../../../utils/fonts/iconfont.css'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import { inject, observer } from 'mobx-react';
-
+import Dialog from '../../../../component/Dialog'
 @inject('classify')
 @observer
 class ListDetail extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            DialogFalg:false
         };
+    }
+    goDialog = () =>{
+   this.setState({
+    DialogFalg:true
+   })
     }
     goBack = () => {
         this.props.history.push({ pathname: `/classifylist/${window.localStorage.getItem('itemId')}` })
@@ -24,7 +30,7 @@ class ListDetail extends Component {
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
-              }
+            }
         });
     }
     render() {
@@ -45,25 +51,36 @@ class ListDetail extends Component {
                             {
                                 this.props.classify.detailList && this.props.classify.detailList.gallery.map((item, index) => {
                                     return <div className="swiper-slide" key={item.id}>
-                                              <img src={item.img_url} alt="" />
-                                           </div>
+                                        <img src={item.img_url} alt="" />
+                                    </div>
                                 })
                             }
                         </div>
                         <div className="swiper-pagination"></div>
                     </div>
-                    
+
                     <div className="xq-main-box">
                         <p>30天无忧退货</p>
                         <p>48小时快速退款</p>
                         <p>满88元免邮费</p>
                     </div>
                     <div className="xq-main-title">
-                      
-                            <h3>哈哈哈啊哈哈哈佳节</h3>
-                            <p>爱傻傻的sad啊实打实阿萨德</p>
-                            <span>￥559</span>
-                        
+                        {
+                            this.props.classify.detailList ?
+                                (<h3>{this.props.classify.detailList.info.name}</h3>) : (null)
+                        }
+                        {
+                            this.props.classify.detailList ?
+                                (<p>{this.props.classify.detailList.info.goods_brief}</p>) : (null)
+                        }
+                        {
+                            this.props.classify.detailList ?
+                                (<span>￥{this.props.classify.detailList.info.retail_price}</span>) : (null)
+                        }
+                    </div>
+                    <div className="xq-main-goodSize"  onClick={() => this.goDialog()}>
+                        <p className='gooodSize-num'>x <span>0</span></p>
+                        <p >选择规则 &nbsp;></p>
                     </div>
 
 
@@ -80,6 +97,12 @@ class ListDetail extends Component {
                     <p className='gocar'>加入购物车</p>
                     <p className='gobuy'>立即购买</p>
                 </div>
+                {
+                    this.state.DialogFalg ?(
+                        <Dialog props={this.props.classify.detailList}></Dialog>
+                    ):(null)
+                }
+               
 
             </div>
         );

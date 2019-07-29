@@ -27,11 +27,11 @@ class ClassifyList extends Component {
            front_name:window.localStorage.getItem('front_name')
        })
         this.props.classify.getClassifyList(id)
-        new BScroll(".list-scroll", {
-            scrolly: true,
-            probeType: 2,
-            click: true
-        })
+        // new BScroll(".list-scroll", {
+        //     scrolly: true,
+        //     probeType: 2,
+        //     click: true
+        // })
     }
     render() {
         return (
@@ -42,7 +42,7 @@ class ClassifyList extends Component {
                     <span></span>
                 </div>
                 <div className="list-scroll">
-                    <div>
+                    <div className='scr'>
                         {
                             this.props.classify.titleList && this.props.classify.titleList.map((item, index) => {
                                 return <span key={item.id} className={item.checked ? 'active' : null} onClick={() => this.props.classify.addListClass(item)}>{item.name}</span>
