@@ -1,6 +1,7 @@
 import { observable, action } from "mobx";
-import { classify, clickClassify, classifyList ,getDetail} from '../../servicer';
-export default class Classifys {
+import { classify, clickClassify, classifyList ,getDetail,addcars,getNumber} from '../../servicer';
+
+export default class Classify {
     // @observable 修饰属性
     @observable leftList = "";
     @observable rightList = "";
@@ -64,5 +65,18 @@ export default class Classifys {
         if(this.num<0){
           this.num=0
         }
+    }
+    //获取购物车数量
+    @action async totalNum(){
+        const data = await getNumber() 
+        console.log(data,"11111")
+    }
+
+
+    @action async addcar(id,num,productId){
+  
+        console.log(id,num,productId)  
+            const data = await addcars({goodsId:id,number:num,productId:productId}) 
+        console.log(data)
     }
 }

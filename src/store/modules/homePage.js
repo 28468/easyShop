@@ -6,7 +6,7 @@ export default class homePages {
     @action async gethomelist() {
         const data = await homePage()
         this.gethomeL = data.data
-      data.data.categoryList.map((item,index)=>{
+      data.data.categoryList.map((item)=>{
           this.getimgList = item
           console.log(item)
       })

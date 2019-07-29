@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import '../../../utils/fonts/iconfont.css'
 import './index.scss'
-import BScroll from 'better-scroll'
 import { inject, observer } from 'mobx-react';
 
 @inject('classify')
@@ -27,11 +26,7 @@ class ClassifyList extends Component {
            front_name:window.localStorage.getItem('front_name')
        })
         this.props.classify.getClassifyList(id)
-        // new BScroll(".list-scroll", {
-        //     scrolly: true,
-        //     probeType: 2,
-        //     click: true
-        // })
+      
     }
     render() {
         return (

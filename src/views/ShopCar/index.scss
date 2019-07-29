@@ -43,11 +43,11 @@
     padding: pxTorem(10px);
     padding-left: 0;
     background: white;
-    margin-top: 1px;
     border-bottom: 1px solid #ccc;
 }
 .shopCar_num{
-    font-size: pxTorem(14px)
+    font-size: pxTorem(14px);
+    margin-left: pxTorem(30px)
 }
 .shopCar_item_img{
     width: pxTorem(70px);
@@ -69,22 +69,22 @@
 }
 .shopCar_item_msg{
     height: pxTorem(60px);
-    width: pxTorem(100px);
+    width: pxTorem(160px);
     margin-left: pxTorem(5px);
     padding: pxTorem(5px) 0;
+ 
  
 }
 .shopCar_item_msg>div{
     height: 33.333%;
     display: flex;
     align-items: center;
-    font-size: pxTorem(14px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: pxTorem(9px);
+    
 }
 .shopCar_item_msg .shopCar_item_price{
     color:red;
+    font-size: pxTorem(12px) !important;
 }
 .shopCar_do{
     width: 100%;

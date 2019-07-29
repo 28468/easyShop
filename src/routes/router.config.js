@@ -7,6 +7,7 @@ import ShopCar from '../views/ShopCar'
 import Wode from '../views/Wode'
 import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
+
 const route = [
     {
         path:'/login',
@@ -37,6 +38,7 @@ const route = [
             {
                 path:'/subject',
                 component:Shiwu,
+                
                 
             },
             {

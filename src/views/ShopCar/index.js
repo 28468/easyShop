@@ -1,35 +1,11 @@
-// import React, { Component } from 'react';
-// import './index.scss'
-// class ShopCar extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  };
-//     }
-//     render() {
-//         return (
-//             <div className='wrap'>
-//                 <div className="car-header">
-
-//                 </div>
-//                 <div className="car-con">
-
-//                 </div>
-//                 <div className="car-bottom"></div>
-
-//             </div>
-//         );
-//     }
-// }
-// export default ShopCar;
-
 
 import React from 'react';
 import "./index.scss"
 import { inject, observer } from "mobx-react"
 import isChecked from "../../img/isCheck.png"
 import noChecked from "../../img/noCheck.png"
-// @inject('shopCar')
-// @observer
+@inject('car')
+@observer
 class ShopCar extends React.Component {
     constructor() {
         super()
@@ -38,12 +14,11 @@ class ShopCar extends React.Component {
         }
     }
     componentDidMount() {
-
-    }
-    componentDidUpdate() {
-
+        this.props.car.getshopList()
+        console.log(this.props.car.shopList)
     }
     render() {
+
         return <div className="shopCar">
             <div className="shopCar_header">
                 <span><b>★</b>30天无忧退货</span>
@@ -52,24 +27,26 @@ class ShopCar extends React.Component {
             </div>
             <div className="shopCar_main">
                 <div className="shopCar_carWrap">
+
                     {
-                        <div className="shopCar_item" >
-                            <div className="shopCar_item_isChecked">
-                                <img src={noChecked} alt="" />
+                        this.props.car.shopList.cartList && this.props.car.shopList.cartList.map((item, index) => {
+                            return <div className="shopCar_item" key={item.id}>
+                                        <div className="shopCar_item_isChecked">
+                                            <img src={noChecked} alt="" />
+                                        </div>
+                                        <div className="shopCar_item_img">
+                                            <img src={item.list_pic_url} alt="" />
+                                        </div>
+                                        <div className="shopCar_item_msg">
+                                            <div>{item.goods_name}</div>
+                                            <div className="shopCar_item_price">￥{item.market_price}</div>
+                                        </div>
+                                        <div className='shopCar_num'>x{item.number}</div>
                             </div>
-                            <div className="shopCar_item_img">
-                                <img src='' alt="" />
-                            </div>
-                            <div className="shopCar_item_msg">
-                                <div>简约知性系列居家地毯 蓝粉拼接</div>
-
-                                <div className="shopCar_item_price">￥：555</div>
-                            </div>
-                            <div className='shopCar_num'>x5</div>
-
-
-                        </div>
+                        })
                     }
+
+
                 </div>
             </div>
             <div className="shopCar_do">
