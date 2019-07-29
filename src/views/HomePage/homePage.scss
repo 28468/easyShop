@@ -1,69 +1,14 @@
 @import '../../utils/mixin';
 @import '../../utils/common.scss';
-.wrap{
+.symain{
     width:100%;
     height: 100%;
     font-size:  pxTorem(12px);
     overflow-y: scroll;
-    .header{
-        width: 100%;
-        height: pxTorem(65px);
-        .top{
-            width: 100%;
-            height: pxTorem(44px);
-            display: flex;
-            justify-content: space-around;
-            font-size:  pxTorem(15px);
-            line-height:  pxTorem(15px);
-            align-items: center;
-            
-         input{
-             width: pxTorem(170px);
-             height:  pxTorem(25px);
-             background: #eee;
-             border-radius: pxTorem(5px);
-             font-size:  pxTorem(12px);
-             text-align: center;
-         }
-         .btn{
-            color: #B4282d;
-            font-size:  pxTorem(12px);
-            border-radius: pxTorem(12px);
-            border: pxTorem(12px);
-        }
-        img{
-            width: pxTorem(60px);
-            height: pxTorem(18px);
-        }
-        }
-        .title{
-            width: 100%;
-            height:  pxTorem(25px);
-            display: flex;
-            margin-top: pxTorem(-7px);
-            align-items: center;
-            .left{
-                width: 90%;
-                font-size:  pxTorem(12px);
-          
-            ul{
-                display: flex;
-                li{
-                    margin-left: pxTorem(5px);
-                }
-            }
-            }
-            .right{
-                width: 10%;
-                img{
-                    width: pxTorem(15px);
-                    height: pxTorem(15px);
-                    margin-top: pxTorem(5px);
-                }
-            }
-        }
-       
-    }
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
   .phone{
     width: 100%;
     height: pxTorem(157px);
@@ -125,10 +70,10 @@ margin: 0 auto;
 }
 .syimgtitle{
     width: 100%;
-    height: pxTorem(350px);
+    height: pxTorem(320px);
     margin-top: pxTorem(10px);
     border-top: pxTorem(5px) solid #eee;
-    border-bottom: pxTorem(5px) solid #eee;
+
     padding:  pxTorem(15px) 0;
     span {
         display: inline-block;
@@ -138,20 +83,20 @@ margin: 0 auto;
     .syyouhui{
         margin-top: pxTorem(15px);
         width: 100%;
-        height: pxTorem(160px);
+        height: pxTorem(200px);
         display: flex;
         justify-content: space-around;
         background: #dfe4e8;
         flex-wrap: wrap;
       dl{
         width: 50%;
-        dt{
-        
-        }
+        height: pxTorem(100px);
+        background: #dfe4e8;
         dd{
+           
             img{
                 width: 100%;
-                height: 50%;
+                
             }
         }
       }
@@ -162,7 +107,7 @@ margin: 0 auto;
 .syimgtitles{
     width: 100%;
     height: pxTorem(480px);
-    margin-top: pxTorem(30px);
+    margin-top: pxTorem(10px);
     padding:  pxTorem(15px) 0;
     text-align: center;
     span {
@@ -187,7 +132,11 @@ margin: 0 auto;
             }
         }
         dd{
-            margin-top: pxTorem(-20px);
+            margin-top: pxTorem(-10px);
+        }
+        b{
+            color: red;
+            margin-top: pxTorem(5px);
         }
       }
     
@@ -196,7 +145,7 @@ margin: 0 auto;
 .syrenqi{
     width: 100%;
     border-top: pxTorem(5px) solid #eee;
-    margin-top: pxTorem(15px);
+    margin-top: pxTorem(35px);
     .sytop{
         display: inline-block;
         width: 100%;
@@ -233,7 +182,7 @@ margin: 0 auto;
 }
 .phones{
     width: 100%;
-    height: pxTorem(157px);
+    height: pxTorem(197px);
     margin-top:  pxTorem(15px); 
     .sytop{
         text-align: center;
@@ -250,14 +199,18 @@ margin: 0 auto;
   }
   .syrishi{
       width: 100%;
-      margin-top: pxTorem(12px);
-      .sytops{
-          width: 100%;
-          height:  pxTorem(30px);
-          line-height:  pxTorem(30px);
-          background: #eee;
-          text-align: center;    
+      margin-top: pxTorem(22px);
+      .syboxsizng{
+        width: 100%;
+        .sytops{
+            width: 100%;
+            height:  pxTorem(30px);
+            line-height:  pxTorem(30px);
+            background: #eee;
+            text-align: center;    
+        }
       }
+    
   }
   .sy_xiangzi{
       width: 100%;
@@ -284,3 +237,4 @@ margin: 0 auto;
       }
   }
 }
+

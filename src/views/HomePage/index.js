@@ -1,107 +1,87 @@
+
 import React, { Component } from 'react'
 import './homePage.scss'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import '../../utils/fonts/iconfont.css'
+import { inject, observer } from 'mobx-react';
+@inject('homePage')
+@observer
 class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
     componentDidMount() {
+        this.props.homePage.gethomelist()
         new Swiper(".banner", {
             autoplay: true,
             loop: true
         });
+  
     }
     render() {
+        console.log(this.props.homePage.gethomeL)
         return (
-            <div className="wrap">
-                <div className="header">
-                   
-                </div>
+            <div className='wrap'>
+            <div className="symain">
                 <div className="phone">
                     <div className="swiper-container banner">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide">
-                                <img src="https://yanxuan.nosdn.127.net/0b6674a2710f2ffcc63ad16a1bc2c0c7.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
-                            </div><div className="swiper-slide">
-                                <img src="https://yanxuan.nosdn.127.net/51a6e81d95eb24b75f5eb7a435ce28e2.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
-                            </div>
+                        {
+                                    this.props.homePage.gethomeL.banner && this.props.homePage.gethomeL.banner.map((item, index) => {
+                                        return    <div className="swiper-slide" key={index}>
+                                <img src={item.image_url} alt="" />
+                                        </div> 
+                                    })
+                                }
+                         
                         </div>
                     </div>
 
                 </div>
             
                 <div className="listOne">
+                        {
+                         this.props.homePage.gethomeL.channel && this.props.homePage.gethomeL.channel.map((item, index) => {
+                             return    <dl key={index}>
+                                         <dt> <img src={item.icon_url} alt="" /></dt>
+                                             <dd>{item.name}</dd>
+                                       </dl>
+                                    })
+                                }
                    
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
-                        <dd>居家</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
-                        <dd>居家</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
-                        <dd>居家</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
-                        <dd>居家</dd>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt="" /></dt>
-                        <dd>居家</dd>
-                    </dl>
+                  
                 </div>
                <div className="syimgtitle">
                 <span>品牌制造商直供</span>
                 <div className="syyouhui">
-                  
-                    <dl>
-                        <dt>新人专享礼包</dt>
-                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
-                    </dl>
-                    <dl>
-                        <dt>新人专享礼包</dt>
-                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
-                    </dl>
-                    <dl>
-                        <dt>新人专享礼包</dt>
-                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
-                    </dl>
-                    <dl>
-                        <dt>新人专享礼包</dt>
-                        <dd><img src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/></dd>
-                    </dl>
+                {
+                         this.props.homePage.gethomeL.brandList && this.props.homePage.gethomeL.brandList.map((item, index) => {
+                             return    <dl key={index}>
+                             <dt>{item.name}</dt>
+                             <dd><img src={item.new_pic_url} alt=""/></dd>
+                                             </dl>
+                                    })
+                                }
+                   
+                
                     </div>
            
                </div>
                <div className="syimgtitles">
                 <span>新品首发</span>
                 <div className="sytuwen">
-                <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
-                        <dd>蔓越莓曲奇200克</dd>
-                            <b>￥36元</b>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
-                        <dd>蔓越莓曲奇200克</dd>
-                        <b>￥36元</b>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
-                        <dd>蔓越莓曲奇200克</dd>
-                        <b>￥36元</b>
-                    </dl>
-                    <dl>
-                        <dt><img src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/></dt>
-                        <dd>蔓越莓曲奇200克</dd>
-                        <b>￥36元</b>
-                    </dl>
+              
+                    {
+                         this.props.homePage.gethomeL.newGoodsList && this.props.homePage.gethomeL.newGoodsList.map((item, index) => {
+                             return      <dl key={index}>
+                             <dt><img src={item.list_pic_url} alt=""/></dt>
+                             <dd>{item.name}</dd>
+                                 <b>￥36元</b>
+                         </dl>
+                                    })
+                                }
                     </div>
            
                </div>
@@ -111,36 +91,21 @@ class HomePage extends Component {
                 <span>人气推荐</span>
                 </div>
                 <div className="syboxs">
-                <div className="syshuang">
-                <div className="sy_left">
-                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
-                </div>
-                <div className="sy_right">
-                <p>双攻揉面蚕丝被 空调被</p>
-                <p>以及桑蚕丝</p>
-                <p>￥699</p>
-                </div>
-                </div>
-                <div className="syshuang">
-                <div className="sy_left">
-                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
-                </div>
-                <div className="sy_right">
-                <p>双攻揉面蚕丝被 空调被</p>
-                <p>以及桑蚕丝</p>
-                <p>￥699</p>
-                </div>
-                </div>
-                <div className="syshuang">
-                <div className="sy_left">
-                <img src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
-                </div>
-                <div className="sy_right">
-                <p>双攻揉面蚕丝被 空调被</p>
-                <p>以及桑蚕丝</p>
-                <p>￥699</p>
-                </div>
-                </div>
+                {
+                         this.props.homePage.gethomeL.hotGoodsList && this.props.homePage.gethomeL.hotGoodsList.map((item, index) => {
+                             return  <div className="syshuang"key={index} >
+                             <div className="sy_left">
+                             <img src={item.list_pic_url} alt=""/>
+                             </div>
+                             <div className="sy_right">
+                             <p>{item.name}</p>
+                             <p>{item.goods_brief}</p>
+                             <p>￥{item.retail_price}</p>
+                             </div>
+                             </div>    
+                                    })
+                                }               
+               
                 </div>
                    </div>
                </div>
@@ -150,113 +115,48 @@ class HomePage extends Component {
                 </div>
                <div className="swiper-container banner">
                         <div className="swiper-wrapper">
-                            <div className="swiper-slide">
-                                <img src="https://yanxuan.nosdn.127.net/0b6674a2710f2ffcc63ad16a1bc2c0c7.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
-                            </div><div className="swiper-slide">
-                                <img src="https://yanxuan.nosdn.127.net/51a6e81d95eb24b75f5eb7a435ce28e2.jpg?imageView&quality=75&thumbnail=750x0" alt="" />
-                            </div>
+                        {
+                                    this.props.homePage.gethomeL.topicList && this.props.homePage.gethomeL.topicList.map((item, index) => {
+                                        return    <div className="swiper-slide" key={index}>
+                                <img src={item.item_pic_url} alt="" />
+                                <p>{item.title}</p>
+                                        </div> 
+                                    })
+                                }
                         </div>
                     </div>
                </div>
 
                <div className='syrishi'>
-               <div className="sytops">
-                <span>居家</span>
-                </div>
-               <div className="sy_xiangzi">
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>  <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                 
-                </dl>
-                
-               </div>
-               </div>
+               {
+                                    this.props.homePage.gethomeL.categoryList && this.props.homePage.gethomeL.categoryList.map((item, index) => {
+                                        return <div className="syboxsizng"  key={index}>
+                                        <div className="sytops">
+                                         <span>{item.name}</span>
+                                         </div> 
+                                        <div className="sy_xiangzi">
+                                        {
+                                    this.props.homePage.gethomeL.topicList && this.props.homePage.gethomeL.topicList.map((item, index) => {
+                                        return   <dl  key={index}>
+                                        <dt><img src="https://yanxuan.nosdn.127.net/149dfa87a7324e184c5526ead81de9ad.png" alt=""/></dt>
+                                        <dd>日式和风懒人沙发</dd>
+                                        <p>￥599</p>
+                                    </dl> 
+                                    })
+                                }
+                                        
+
+                                        </div>
+                                        </div>  
+                                    })
+                                }
                
-               <div className='syrishi'>
-               <div className="sytops">
-                <span>餐厨</span>
-                </div>
-               <div className="sy_xiangzi">
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
-                <dl>
-                    <dt><img src="https://yanxuan.nosdn.127.net/c39d54c06a71b4b61b6092a0d31f2335.png" alt=""/></dt>
-                    <dd>日式和风懒人沙发</dd>
-                    <p>￥599</p>
-                </dl>
+              
                </div>
                </div>
-            </div>
+    </div>
         );
     }
 }
 
-export default HomePage;
+export default HomePage;  

@@ -5,10 +5,20 @@ import Classify from '../views/Classify'
 import Shiwu from '../views/Shiwu'
 import ShopCar from '../views/ShopCar'
 import Wode from '../views/Wode'
+import ClassifyList from '../views/Classify/ClassifyList'//分类列表
+import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
 const route = [
     {
         path:'/login',
         component:Login,
+    },
+    {   //分类列表
+        path:'/classifylist/:id',
+        component:ClassifyList,
+    },
+    {   //列表详情
+        path:'/listDetail/:id',
+        component:ListDetail,
     },
     {
         path:'/',
@@ -25,7 +35,7 @@ const route = [
                 
             },
             {
-                path:'/shiwu',
+                path:'/subject',
                 component:Shiwu,
                 
             },

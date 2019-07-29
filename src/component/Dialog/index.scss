@@ -1,0 +1,10 @@
+@import '../../utils//mixin';
+@import '../../utils/common.scss';
+.dialog-wrap{
+ width: 100%;
+ height: pxTorem(150px);
+ background: red;
+ position: fixed;
+ left: 0;
+ bottom: 0;
+}

@@ -17,13 +17,28 @@
 }
 .footer{
     width: 100%;
-    height: pxTorem(60px);
-    background: #cccccc;
+    height: pxTorem(50px);
+    background: #ffffff;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     font-size: pxTorem(14px);
+    justify-content: space-around;
+   
+   a {
+       flex: 1;
+       text-align: center;
+       color: #000;
+   }
+    dt{
+        i{
+            font-size: pxTorem(18px);
+        }
+    }
+    dd{
+        font-size: pxTorem(12px);
+    }
 }
-.active{
+
+.footer .active{
     color: red;
 }
