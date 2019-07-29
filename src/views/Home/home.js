@@ -16,23 +16,23 @@ class home extends Component {
                     <MapRoute route={this.props.route}></MapRoute>
                 </div>
                 <div className='footer'>
-                    < NavLink to='/HomePage' tag='dl'>
+                    < NavLink to='/HomePage'>
                         <dt><i className="iconfont icon-shouye"></i> </dt>
                         <dd><span>首页</span></dd>
                     </NavLink>
-                    < NavLink to='/subject' tag='dl'>
+                    < NavLink to='/subject'>
                         <dt><i className="iconfont icon-gongzuojilu"></i> </dt>
                         <dd><span>专题</span></dd>
                     </NavLink>
-                    < NavLink to='/classify' tag='dl'>
+                    < NavLink to='/classify'>
                         <dt><i className="iconfont icon-gongzuo"></i> </dt>
                         <dd><span>分类</span></dd>
                     </NavLink>
-                    <NavLink to='/shopCar' tag='dl'>
+                    <NavLink to='/shopCar'>
                         <dt><i className="iconfont icon-gouwuche"></i> </dt>
                         <dd><span>购物车</span></dd>
                     </NavLink>
-                    < NavLink to='/wode' tag='dl'>
+                    < NavLink to='/wode'>
                         <dt><i className="iconfont icon-wode"></i> </dt>
                         <dd><span>我的</span></dd>
                     </NavLink>

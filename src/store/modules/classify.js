@@ -54,5 +54,15 @@ export default class Classifys {
     @action closeDialog(){
         this.DialogFalg =false;
     }
-
+    //加
+    @action addNum(){
+        this.num++
+    }
+    //减
+    @action delNum(){
+        this.num--
+        if(this.num<0){
+          this.num=0
+        }
+    }
 }

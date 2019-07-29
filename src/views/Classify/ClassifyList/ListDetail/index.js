@@ -75,7 +75,7 @@ class ListDetail extends Component {
                         }
                     </div>
                     <div className="xq-main-goodSize"  onClick={() =>  this.props.classify.showDialog()}>
-                        <p className='gooodSize-num'>x <span>0</span></p>
+                        <p className='gooodSize-num'>x <span>{this.props.classify.num}</span></p>
                         <p >选择规则 &nbsp;></p>
                     </div>
 
@@ -90,7 +90,7 @@ class ListDetail extends Component {
                         <i className='iconfont icon-gouwuche'></i>
                     </p>
 
-                    <p className='gocar'>加入购物车</p>
+                    <p className='gocar' onClick={() =>  this.props.classify.showDialog()}>加入购物车</p>
                     <p className='gobuy'>立即购买</p>
                 </div>
                 {

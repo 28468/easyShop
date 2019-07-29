@@ -33,7 +33,7 @@ class ShopCar extends Component {
                     <span className='dialog-del' onClick={() =>  this.props.classify.closeDialog()}>x</span>
                 </div>
                 <div className="dialog-nums">
-                    <div><span>-</span><p>0</p><span>+</span></div>
+                    <div><span onClick={() =>this.props.classify.delNum()}>-</span><p>{this.props.classify.num}</p><span onClick={()=>this.props.classify.addNum()}>+</span></div>
                 </div>
                 <div className="dialog-foot">
                     <p>加入购物车</p>
