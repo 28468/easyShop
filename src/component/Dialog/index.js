@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import {  Toast,Button } from 'antd-mobile';
 import './index.scss'
 @inject('classify')
 @observer
@@ -8,6 +9,16 @@ class ShopCar extends Component {
         super(props);
         this.state = {};
     }
+  successToast=()=> {
+      if( this.props.classify.code===0){
+        Toast.success('添加成功');
+      }else{
+        Toast.success('添加失败');
+      }
+     
+        
+      }
+      
     componentDidMount() {
         console.log(this.props.props)
         console.log(this.props.classify.DialogFalg)
@@ -34,7 +45,8 @@ this.props.classify.totalNum()
                     <div><span onClick={() =>this.props.classify.delNum()}>-</span><p>{this.props.classify.num}</p><span onClick={()=>this.props.classify.addNum()}>+</span></div>
                 </div>
                 <div className="dialog-foot">
-                    <p onClick={() =>this.props.classify.addcar(this.props.props.info.id+"",this.props.classify.num,this.props.props.productList[0].id)}>加入购物车</p>
+                    <p onClick={() =>this.props.classify.addcar(this.props.props.info.id+"",this.props.classify.num,this.props.props.productList[0].id)}>
+                    <Button onClick={()=>this.successToast()}>加入购物车</Button></p>
                     <p>立即下单</p>
                 </div>
             </div>

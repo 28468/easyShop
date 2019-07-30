@@ -91,11 +91,12 @@
     height: pxTorem(45px);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: pxTorem(1px) solid #ccc;
     border-top: pxTorem(1px) solid #ccc;
 }
 .shopCar_allMsg{
-    font-size: pxTorem(14px)
+    font-size: pxTorem(10px)
 }
 .shopCar_edit{
     margin-left: pxTorem(10px);

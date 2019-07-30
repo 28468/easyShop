@@ -14,12 +14,14 @@ class ListDetail extends Component {
             DialogFalg:false
         };
     }
-  
+    goCar=()=>{
+        this.props.history.push({ pathname: `/shopCar`})
+    }
     goBack = () => {
         this.props.history.push({ pathname: `/classifylist/${window.localStorage.getItem('itemId')}` })
     }
     componentDidMount() {
-        console.log()
+        console.log(this.props.match.params.id)
         this.props.classify.getDetailList(this.props.match.params.id)
         new Swiper(".banner", {
             autoplay: true,
@@ -86,8 +88,7 @@ class ListDetail extends Component {
                         <i className='iconfont icon-weixuanzhong-01'></i>
                     </p>
                     <p>
-
-                        <i className='iconfont icon-gouwuche'></i>
+                        <i className='iconfont icon-gouwuche' onClick={() =>  this.goCar()}></i>
                     </p>
 
                     <p className='gocar' onClick={() =>  this.props.classify.showDialog()}>加入购物车</p>

@@ -16,8 +16,6 @@ export function classifyList(id) {
 export function getDetail(id) {
   return request.get('/goods/detail?id='+id);
 }
-
-
 //添加购物车
 export function addcars(params) {
   console.log(params)
