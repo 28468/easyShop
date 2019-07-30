@@ -12,8 +12,7 @@ export default class Login{
          if(res.errno===0){
                 setCookie(res.data.sessionKey);
                 this.count=res.errno;
-             
-         
+
          }else{
             this.count=res.errno;
          }

@@ -9,10 +9,10 @@
     box-sizing: border-box;
     align-items: center;
     p{
-        font-size: pxTorem(14px)
+        font-size: pxTorem(12px)
     }
     i{
-        font-size: pxTorem(12px)
+        font-size: pxTorem(11px)
     }
 }
 .xq-main{
@@ -45,15 +45,15 @@
         padding: pxTorem(10px) 0;
         text-align: center;
         h3{
-            font-size: pxTorem(18px)
+            font-size: pxTorem(16px)
         }
         p{
             padding: pxTorem(5px) 0 pxTorem(15px) 0;
-            font-size: pxTorem(11px)
+            font-size: pxTorem(10px)
         }
         span{
             display: block;
-            font-size: pxTorem(12px);
+            font-size: pxTorem(13px);
             color: red;
         }
     }
@@ -65,7 +65,7 @@
         border-bottom: pxTorem(5px) solid #eeeeee;
         justify-content: flex-end;
         p{
-            font-size: pxTorem(14px);
+            font-size: pxTorem(12px);
             margin-right: pxTorem(10px);
         }
         .gooodSize-num{
@@ -85,11 +85,11 @@
         height: pxTorem(40px);
         text-align: center;
         line-height: pxTorem(40px);
-        font-size: pxTorem(12px);
+        font-size: pxTorem(11px);
         color: aliceblue;
         i{
             color: black;
-            font-size: pxTorem(20px)
+            font-size: pxTorem(18px)
         }
     }
     .gocar{

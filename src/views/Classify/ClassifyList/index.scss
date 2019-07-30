@@ -17,7 +17,7 @@
     box-sizing: border-box;
     align-items: center;
     p{
-        font-size: pxTorem(14px)
+        font-size: pxTorem(12px)
     }
 }
 .list-scroll{
@@ -33,7 +33,7 @@
             height: pxTorem(30px);
             line-height: pxTorem(30px);
             border-bottom: 5px solid white;
-            font-size: pxTorem(14px);
+            font-size: pxTorem(11px);
             padding: 0 pxTorem(18px);
         }
        
@@ -50,7 +50,7 @@
     width: 100%;
     height: pxTorem(80px);
     background: #eeeeee;
-    font-size: pxTorem(14px);
+    font-size: pxTorem(12px);
    div:nth-child(1){
        width: 100%;
        height: pxTorem(40px);
@@ -63,6 +63,7 @@
     height: pxTorem(40px);
     display: flex;
     justify-content: center;
+    color: #666666;
 
 }
 }
@@ -78,7 +79,7 @@
         border: pxTorem(0.5px) solid #eeeeee;
         border-right: 0;
         margin-left: pxTorem(1px);
-        font-size: pxTorem(12px);
+        font-size: pxTorem(11px);
         text-align: center;
         img{
             width: 80%;

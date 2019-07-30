@@ -11,7 +11,7 @@ export default class Car{
        this.shopList.cartList.forEach((item)=>{
         item.checked = 0
       })
-       console.log(data.data)
+       console.log(data)
      }
        
      @action allImg() {//如果点击全选的时 allFlag 是true时  让所有checked为1  反之  为0
@@ -49,15 +49,15 @@ export default class Car{
      @action async delete() {
       let ids = [];
       this.shopList.cartList.forEach((item)=>{
-     
         if(item.checked ===1){
-         ids.push(item.id)
+         ids.push(item.product_id)
         }
-
        })
-     
-      const data = await delshopCar({productIds:ids.join(',')}); 
-      console.log(data)
+      if(this.flags){
+        const data = await delshopCar({productIds:ids.join(',')}); 
+        console.log(data)
+        this.shopList = data.data
+      }
      
  
    }
