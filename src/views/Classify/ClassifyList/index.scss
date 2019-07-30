@@ -21,13 +21,14 @@
     }
 }
 .list-scroll{
-    width: pxTorem(720px);
     height: pxTorem(30px);
     margin-top: pxTorem(10px);
-    &>div {
+   .scr {
+    overflow-x: auto;
         display: flex;
         align-items: center;
-        &>span {
+        span {
+            width: pxTorem(40px);
             flex-shrink: 0;
             height: pxTorem(30px);
             line-height: pxTorem(30px);
@@ -69,7 +70,6 @@
 .list-main-con{
     width: 100%;
     flex: 1;
-   
     display: flex;
     flex-wrap: wrap;
     .list-main-list{

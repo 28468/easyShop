@@ -14,16 +14,14 @@ class ListDetail extends Component {
             DialogFalg:false
         };
     }
-    goDialog = () =>{
-   this.setState({
-    DialogFalg:true
-   })
+    goCar=()=>{
+        this.props.history.push({ pathname: `/shopCar`})
     }
     goBack = () => {
         this.props.history.push({ pathname: `/classifylist/${window.localStorage.getItem('itemId')}` })
     }
     componentDidMount() {
-        console.log()
+        console.log(this.props.match.params.id)
         this.props.classify.getDetailList(this.props.match.params.id)
         new Swiper(".banner", {
             autoplay: true,
@@ -78,8 +76,8 @@ class ListDetail extends Component {
                                 (<span>￥{this.props.classify.detailList.info.retail_price}</span>) : (null)
                         }
                     </div>
-                    <div className="xq-main-goodSize"  onClick={() => this.goDialog()}>
-                        <p className='gooodSize-num'>x <span>0</span></p>
+                    <div className="xq-main-goodSize"  onClick={() =>  this.props.classify.showDialog()}>
+                        <p className='gooodSize-num'>x <span>{this.props.classify.num}</span></p>
                         <p >选择规则 &nbsp;></p>
                     </div>
 
@@ -90,16 +88,15 @@ class ListDetail extends Component {
                         <i className='iconfont icon-weixuanzhong-01'></i>
                     </p>
                     <p>
-
-                        <i className='iconfont icon-gouwuche'></i>
+                        <i className='iconfont icon-gouwuche' onClick={() =>  this.goCar()}></i>
                     </p>
 
-                    <p className='gocar'>加入购物车</p>
+                    <p className='gocar' onClick={() =>  this.props.classify.showDialog()}>加入购物车</p>
                     <p className='gobuy'>立即购买</p>
                 </div>
                 {
-                    this.state.DialogFalg ?(
-                        <Dialog></Dialog>
+                    this.props.classify.DialogFalg ?(
+                        <Dialog props={this.props.classify.detailList}></Dialog>
                     ):(null)
                 }
                

@@ -7,6 +7,7 @@ import ShopCar from '../views/ShopCar'
 import Wode from '../views/Wode'
 import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
+import ZtDetail from '../views/Shiwu/Detail'//专题详情
 const route = [
     {
         path:'/login',
@@ -19,6 +20,9 @@ const route = [
     {   //列表详情
         path:'/listDetail/:id',
         component:ListDetail,
+    },  //专题详情
+    {   path:'/ztDetail/:id',
+        component:ZtDetail,
     },
     {
         path:'/',
@@ -36,8 +40,7 @@ const route = [
             },
             {
                 path:'/subject',
-                component:Shiwu,
-                
+                component:Shiwu,              
             },
             {
                 path:'/shopCar',
