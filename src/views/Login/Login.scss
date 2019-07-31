@@ -1,0 +1,61 @@
+@import '../../utils/mixin';
+@import '../../utils/common.scss';
+
+.wrap{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    margin-top: pxTorem(40px); 
+    width: 100%;
+    height: pxTorem(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: pxTorem(96px);
+    height: pxTorem(32px);
+}
+.content{
+    width: 80%;
+    height: pxTorem(270px);
+    margin: pxTorem(30px) auto;
+    color: #cccccc;
+}
+
+.content input{
+    width: 100%;
+    height: pxTorem(30px);
+    border: 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: pxTorem(12px);
+    line-height: pxTorem(30px);
+    color: #cccccc;
+  
+}
+.title{
+    margin-top: pxTorem(5px);
+    width: 100%;
+    height: pxTorem(30px);
+    font-size: pxTorem(12px);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+.content button{
+    width: 100%;
+    height: pxTorem(30px);
+    background: #B4282D;
+   margin-top: pxTorem(10px);
+    border: 0;
+    color: #cccccc;
+}
+.content .loginbtn1{
+    background: #ffffff;
+    border: 1px solid #B4282D;
+    color: #B4282D;
+}

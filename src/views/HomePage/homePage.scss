@@ -1,0 +1,240 @@
+@import '../../utils/mixin';
+@import '../../utils/common.scss';
+.symain{
+    width:100%;
+    height: 100%;
+    font-size:  pxTorem(12px);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+  .phone{
+    width: 100%;
+    height: pxTorem(157px);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .titles{
+    margin-top: pxTorem(10px);
+    width: 100%;
+    height: pxTorem(30px);
+   ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+    li{
+        display: flex;
+        span{
+            display: inline-block;
+            font-size: pxTorem(10px);
+        }
+        img{
+            width: pxTorem(14px);
+            height: pxTorem(14px);
+           
+        }    
+      }
+   }
+
+  }
+.listOne{
+  width: 100%;
+  height: pxTorem(170px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+text-align: center;
+margin: 0 auto;
+  dl{
+    width: 18%;
+    margin-top: pxTorem(5px);
+    margin-left: pxTorem(5px);
+   
+    dt{
+      width: 100%;
+      
+      img{
+        width: 50%;
+        height: 50%;
+      }
+    }
+    dd{
+        font-size: pxTorem(10px);
+        margin-left: pxTorem(5px);
+    }
+
+  }
+}
+.syimgtitle{
+    width: 100%;
+    height: pxTorem(320px);
+    margin-top: pxTorem(10px);
+    border-top: pxTorem(5px) solid #eee;
+
+    padding:  pxTorem(15px) 0;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .syyouhui{
+        margin-top: pxTorem(15px);
+        width: 100%;
+        height: pxTorem(200px);
+        display: flex;
+        justify-content: space-around;
+        background: #dfe4e8;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+        height: pxTorem(100px);
+        background: #dfe4e8;
+        dd{
+           
+            img{
+                width: 100%;
+                
+            }
+        }
+      }
+    
+    }
+}
+
+.syimgtitles{
+    width: 100%;
+    height: pxTorem(480px);
+    margin-top: pxTorem(10px);
+    padding:  pxTorem(15px) 0;
+    text-align: center;
+    span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .sytuwen{
+        width: 100%;
+        height: pxTorem(260px);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      dl{
+        width: 50%;
+     margin-top: pxTorem(5px);
+        dt{
+            img{
+                margin-top: pxTorem(-20px);
+                width: 100%;
+                height: 10%;
+            }
+        }
+        dd{
+            margin-top: pxTorem(-10px);
+        }
+        b{
+            color: red;
+            margin-top: pxTorem(5px);
+        }
+      }
+    
+    }
+}
+.syrenqi{
+    width: 100%;
+    border-top: pxTorem(5px) solid #eee;
+    margin-top: pxTorem(35px);
+    .sytop{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding:  pxTorem(10px) 0;
+        border-bottom: pxTorem(2px) solid #eee;
+        margin-top:  pxTorem(15px);
+        span{
+            text-align: center;
+           
+        }
+    }
+}
+.syboxs{
+    width: 100%;
+  
+    .syshuang{
+        display: flex;
+        border-bottom: pxTorem(2px) solid #eee;
+        .sy_left{
+            width: 40%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .sy_right{
+            width: 60%;
+            p{
+             margin-top:  pxTorem(15px);      
+            }
+        }
+    }
+}
+.phones{
+    width: 100%;
+    height: pxTorem(197px);
+    margin-top:  pxTorem(15px); 
+    .sytop{
+        text-align: center;
+        span{
+            text-align: center;
+           
+        }
+    }
+    img{
+        margin-top: pxTorem(12px);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .syrishi{
+      width: 100%;
+      margin-top: pxTorem(22px);
+      .syboxsizng{
+        width: 100%;
+        .sytops{
+            width: 100%;
+            height:  pxTorem(30px);
+            line-height:  pxTorem(30px);
+            background: #eee;
+            text-align: center;    
+        }
+      }
+    
+  }
+  .sy_xiangzi{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      dl{
+          width: 50%;
+          dt{
+              
+              img{
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+          dd{
+              margin-top:  pxTorem(-20px);
+              text-align: center;
+          }
+          p{
+            text-align: center;
+            color: red;
+          }
+      }
+  }
+}
+
