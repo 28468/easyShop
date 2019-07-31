@@ -14,6 +14,11 @@
         height:  pxTorem(30px);
         line-height:  pxTorem(30px);
       border: 1px solid #ccc;
+<<<<<<< HEAD
+=======
+      display: flex;
+      justify-content: space-between;
+>>>>>>> 3e0e11d39fe4b59579b9bb77f766bc6b77ac8939
         span{
             display: inline-block;
          
@@ -42,12 +47,32 @@
             
           }
         }
+<<<<<<< HEAD
         .xxliuy{
             width: 100%;
             display: flex;
             justify-content: space-between;
                border-bottom: 1px solid #ccc;
           padding:  pxTorem(15px) 0;
+=======
+        .xxbox{
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            div{
+                font-size:  pxTorem(11px);
+            }
+           
+        }
+       
+        .xxliuy{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;        
+          padding:  pxTorem(15px) 0;
+          .xxpinglun{
+            font-size:  pxTorem(10px);
+        }
+>>>>>>> 3e0e11d39fe4b59579b9bb77f766bc6b77ac8939
         }
         p{
             text-align: center;

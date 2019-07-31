@@ -3,9 +3,15 @@ import Login from './modules/login' //登录页
 import Classify from './modules/classify' //分类页
 import HomePage from './modules/homePage' //首页
 import ShopCar from './modules/shopCar' //购物车
+<<<<<<< HEAD
 import TopicList from './modules/topicList'//专题
 import Getdetail from './modules/topicList'//专题详情
 import Getrelated from './modules/topicList'//专题详情
+=======
+import TopicList from './modules/topicList'  //获取专题数据
+import Getdetail from './modules/topicList'//获取专题详情
+import Getrelated from './modules/topicList'//根据专题Id获取相关专题
+>>>>>>> 3e0e11d39fe4b59579b9bb77f766bc6b77ac8939
 import getcommentlist from './modules/topicList'//根据专题ID或者商品ID获取评论获取相关专题
 // 实例化模块
 const login = new Login();

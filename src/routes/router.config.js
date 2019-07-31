@@ -8,6 +8,11 @@ import Wode from '../views/Wode'
 import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
 import ZtDetail from '../views/Shiwu/Detail'//专题详情
+<<<<<<< HEAD
+=======
+import Addpltitles from '../views/Shiwu/Detail/Addpltitle'//专题详情
+import Alltiitle from '../views/Shiwu/Detail/Alltiitle'//专题详情
+>>>>>>> 3e0e11d39fe4b59579b9bb77f766bc6b77ac8939
 const route = [
     {
         path:'/login',
@@ -20,10 +25,25 @@ const route = [
     {   //列表详情
         path:'/listDetail/:id',
         component:ListDetail,
+<<<<<<< HEAD
     },  //专题详情
     {   path:'/ztDetail/:id',
         component:ZtDetail,
     },
+=======
+    },  //专题详情`
+    {   path:'/ztDetail/:id',
+        component:ZtDetail,
+    },
+    //专题详情
+    {   path:'/Addpltitles',
+        component:Addpltitles,
+    },
+       //专题详情
+       {   path:'/Alltiitle',
+       component:Alltiitle,
+   },
+>>>>>>> 3e0e11d39fe4b59579b9bb77f766bc6b77ac8939
     {
         path:'/',
         component:Home,
