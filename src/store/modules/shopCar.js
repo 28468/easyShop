@@ -43,7 +43,9 @@ export default class Car{
       this.shopList.cartList.forEach((item)=>{//让所有checked为0 变为未选中
         item.checked = 0
       })
+      
       if(!this.flags){
+      
         const datas = await getShopCar(); 
         this.shopList = datas.data
         console.log(datas)

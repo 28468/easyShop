@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './index.scss'
 import '../../utils/fonts/iconfont.css'
-import { inject, observer } from "mobx-react";
+import {  Toast } from 'antd-mobile';
+// import { inject, observer } from "mobx-react";
 import {removeCookie} from '../../utils/index'
 
 class Wode extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user:'',
       userPower: [
         {
           icon: 'icon-gongzuojilu',
@@ -61,6 +63,12 @@ class Wode extends Component {
         }]
     }
   }
+  componentDidMount(){
+   this.setState({
+    user: window.localStorage.getItem('nideShopUser')
+   })
+    console.log( window.localStorage.getItem('nideShopUser'))
+  }
   render() {
 
     return (
@@ -74,7 +82,7 @@ class Wode extends Component {
                   <h5> </h5>
                 </div>
                 <div className='info'>
-                  <span>110</span>
+                  <span>{this.state.user}</span>
                   <span>普通用户</span>
                 </div>
               </div> 
@@ -104,7 +112,7 @@ class Wode extends Component {
     if('link' in item){
       this.props.history.push(item.link)
     } else {
-      // Toast.offline(`${item.name}功能还未解锁，请耐心等候~`,1)
+      Toast.success('功能还未解锁，请耐心等候~',1);
     }
   }
   goTo=()=>{

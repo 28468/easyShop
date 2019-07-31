@@ -14,6 +14,7 @@ class Login extends Component {
     componentDidUpdate() {
         if (this.props.login.count === 0) {
             console.log(this.props.login.count);
+            window.localStorage.setItem('nideShopUser',this.state.phone)
             this.props.history.push("/")
         }
     }
