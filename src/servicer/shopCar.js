@@ -10,3 +10,15 @@ export function delshopCar(id) {
   console.log(id)
   return request.post('/cart/delete',id)
 }
+//获取商品数量和总价
+
+export function carchecked(params) {
+  console.log(params)
+  return request.post('/cart/checked',params)
+}
+
+//数量改变
+export function updata(params) {
+  console.log(params)
+  return request.post('/cart/updata',params);
+}

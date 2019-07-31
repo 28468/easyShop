@@ -81,6 +81,7 @@
     justify-content: space-around;
  
     p{
+        position: relative;
         flex: 1;
         height: pxTorem(40px);
         text-align: center;
@@ -98,4 +99,14 @@
     .gobuy{
         background: skyblue;
     }
+}
+#acti{
+    color: red;
+}
+.carNumber{
+    position: absolute;
+    left:pxTorem(115px);
+    bottom: pxTorem(25px);
+    color: red;
+    font-size: pxTorem(14px)
 }

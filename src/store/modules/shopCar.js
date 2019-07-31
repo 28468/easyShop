@@ -3,13 +3,13 @@ import {getShopCar,delshopCar} from '../../servicer';
 export default class Car{
     @observable shopList = ""; 
    
-    @observable allFlag = false //控制所有图片选择的开关
+    @observable allFlag = true //控制所有图片选择的开关
     @observable flags = false//控制编辑 完成 删除 下单 加加减减显示
     @action async getshopList() {
         const data = await getShopCar(); 
        this.shopList = data.data
        this.shopList.cartList.forEach((item)=>{
-        item.checked = 0
+        item.checked = 1
       })
        console.log(data)
      }
@@ -38,11 +38,17 @@ export default class Car{
       })
     
      }
-     @action bianji(){
+     @action async bianji(){
       this.flags = !this.flags;//控制编辑 完成 删除 下单 加加减减显示
       this.shopList.cartList.forEach((item)=>{//让所有checked为0 变为未选中
         item.checked = 0
       })
+      if(!this.flags){
+        const datas = await getShopCar(); 
+        this.shopList = datas.data
+        console.log(datas)
+      }
+     
      }
 
     
@@ -58,9 +64,21 @@ export default class Car{
         console.log(data)
         this.shopList = data.data
       }
-     
- 
    }
+
+
+
+     //加
+     @action addsNum(item) {
+      item.number++
+     }
+    //减
+     @action delsNum(item) {
+      item.number--
+      if (item.number < 1) {
+          item.number = 1
+      }
+  }
        
 
     

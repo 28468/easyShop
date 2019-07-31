@@ -12,6 +12,10 @@ class HomePage extends Component {
         super(props);
         this.state = {};
     }
+    goto = (item) => {
+ 
+        this.props.history.push({ pathname: `/classifylist/${item.id}`})
+    }
     componentDidMount() {
         this.props.homePage.gethomelist()
         new Swiper(".banner", {
@@ -44,7 +48,7 @@ class HomePage extends Component {
                     <div className="listOne">
                         {
                             this.props.homePage.gethomeL.channel && this.props.homePage.gethomeL.channel.map((item, index) => {
-                                return <dl key={index}>
+                                return <dl key={index} onClick={() => this.goto(item)}>
                                     <dt> <img src={item.icon_url} alt="" /></dt>
                                     <dd>{item.name}</dd>
                                 </dl>

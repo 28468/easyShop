@@ -1,5 +1,6 @@
 import { observable, action } from "mobx";
-import { classify, clickClassify, classifyList, getDetail, addcars, getNumber } from '../../servicer';
+import { classify, clickClassify, classifyList, getDetail, addcars, getNumber ,addCol} from '../../servicer';
+import {  Toast } from 'antd-mobile';
 
 export default class Classify {
     // @observable 修饰属性
@@ -10,7 +11,9 @@ export default class Classify {
     @observable detailList = "";//商品详情数据
     @observable DialogFalg = false;//控制dialog的开关变量
     @observable num = 0;//dialog里的数量
+    @observable carNumber = 0//购物车数量
     @observable code = 0;//1添加成功 其他添加失败
+    @observable colcode ='';//
     @action async getList() {
         const data = await classify()
         this.leftList = data.data.categoryList
@@ -69,8 +72,9 @@ export default class Classify {
     }
     //获取购物车数量
     @action async totalNum() {
-        const data = await getNumber()
-        console.log(data, "11111")
+        const data = await getNumber();
+        this.carNumber = data.data.cartTotal.goodsCount
+        console.log(this.carNumber, "11111")
     }
     //添加购物车
     @action async addcar(id, num, productId) {
@@ -79,4 +83,18 @@ export default class Classify {
         this.code = data.errno
         console.log(data)
     }
+    
+    //添加收藏
+    @action async addCollect() {
+       
+        const data = await addCol({typeId: 0, valueId: this.detailList.info.id })
+        this.colcode = data.data.type
+        if(  this.colcode==='add'){
+            Toast.success('添加收藏');
+          }else{
+            Toast.success('取消收藏');
+          }
+        console.log(this.colcode)
+    }
+    
 }

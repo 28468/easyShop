@@ -8,6 +8,8 @@ import Wode from '../views/Wode'
 import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
 import ZtDetail from '../views/Shiwu/Detail'//专题详情
+import Collect from '../views/Wode/Collect'//收藏
+import Address from  '../views/Wode/Address'
 const route = [
     {
         path:'/login',
@@ -23,6 +25,12 @@ const route = [
     },  //专题详情
     {   path:'/ztDetail/:id',
         component:ZtDetail,
+    },
+    {   path:'/collect',
+        component:Collect,
+    },
+    {   path:'/address',
+        component:Address,
     },
     {
         path:'/',

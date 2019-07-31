@@ -12,12 +12,12 @@ class Wode extends Component {
         {
           icon: 'icon-gongzuojilu',
           name: '我的收藏',
-          link: '/'
+          link: '/collect'
         },
         {
           icon: 'icon-address',
           name: '地址管理',
-          link: '/'
+          link: '/address'
         },
         {
           icon: 'icon-wodedingdan',

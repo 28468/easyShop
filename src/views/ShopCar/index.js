@@ -5,6 +5,7 @@ import { inject, observer } from "mobx-react"
 import yesChecked from "../../img/isCheck.png"
 import noChecked from "../../img/noCheck.png"
 @inject('car')
+@inject('classify')
 @observer
 class ShopCar extends React.Component {
     constructor() {
@@ -18,11 +19,12 @@ class ShopCar extends React.Component {
         this.props.history.push({ pathname: `/listDetail/${id}`})
     }
     componentDidMount() {
+      
         this.props.car.getshopList()
         console.log(this.props.car.shopList)
     }
     render() {
-
+     
         return <div className="shopCar">
             <div className="shopCar_header">
                 <span><b>★</b>30天无忧退货</span>
@@ -60,9 +62,9 @@ class ShopCar extends React.Component {
                                        {
                                            this.props.car.flags?(
                                             <div className="car-nums" >
-                                            <div><span >
+                                            <div><span onClick={() =>this.props.car.delsNum(item)}>
                                             -</span><p>{item.number}</p>
-                                            <span>
+                                            <span onClick={()=>this.props.car.addsNum(item)}>
                                             +</span></div>
                                          </div>
                                            ):(null)
@@ -77,7 +79,7 @@ class ShopCar extends React.Component {
                     <img src={this.props.car.allFlag ? yesChecked : noChecked} alt="" />
                 </div>
                 <div className="shopCar_allMsg">
-                    已选({this.props.car.shopList.cartTotal && this.props.car.shopList.cartTotal.goodsCount}) ￥{this.props.car.shopList.cartTotal && this.props.car.shopList.cartTotal.goodsAmount}
+                    已选({this.props.car.shopList && this.props.car.shopList.cartTotal.checkedGoodsCount}) ￥{this.props.car.shopList && this.props.car.shopList.cartTotal.checkedGoodsAmount}
                 </div>
                 <div className="shopCar_edit" onClick={() => this.props.car.bianji()}>
                     {this.props.car.flags?( <p>完成</p>  ):(<p>编辑</p> )}
