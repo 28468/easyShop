@@ -9,7 +9,9 @@ import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
 import ZtDetail from '../views/Shiwu/Detail'//专题详情
 import Collect from '../views/Wode/Collect'//收藏
-import Address from  '../views/Wode/Address'
+import Address from  '../views/Wode/Address'//地址
+import AddressDetail from '../views/Wode/Address/AddressDetail'
+
 const route = [
     {
         path:'/login',
@@ -31,6 +33,10 @@ const route = [
     },
     {   path:'/address',
         component:Address,
+    },
+    {
+        path:'/addressDetail',
+        component:AddressDetail,
     },
     {
         path:'/',

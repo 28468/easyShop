@@ -39,6 +39,7 @@ export default class Car{
     
      }
      @action async bianji(){
+
       this.flags = !this.flags;//控制编辑 完成 删除 下单 加加减减显示
       this.shopList.cartList.forEach((item)=>{//让所有checked为0 变为未选中
         item.checked = 0

@@ -50,6 +50,7 @@ export default class Classify {
         const data = await getDetail(id)
         console.log(data.data)
         this.detailList = data.data
+        console.log(data,'111111')
     }
     //显示dialog
     @action showDialog() {
@@ -86,13 +87,23 @@ export default class Classify {
     
     //添加收藏
     @action async addCollect() {
-       
         const data = await addCol({typeId: 0, valueId: this.detailList.info.id })
         this.colcode = data.data.type
         if(  this.colcode==='add'){
-            Toast.success('添加收藏');
+            Toast.success('添加收藏',2);
           }else{
-            Toast.success('取消收藏');
+            Toast.success('取消收藏',2);
+          }
+        console.log(this.colcode)
+    }
+
+    @action async addCollects(item) {
+        console.log(item.value_id)
+        const data = await addCol({typeId: 0, valueId: item.value_id })
+        this.colcode = data.data.type
+        if( this.colcode!=='add'){
+            Toast.success('取消收藏',2);
+          window.location.reload();
           }
         console.log(this.colcode)
     }

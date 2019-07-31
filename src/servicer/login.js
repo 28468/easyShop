@@ -8,4 +8,7 @@ export function login(params) {
 export function getCollectData(params){
     return request.get("/collect/list",{params})
 }
-
+///获取用户地址数据
+export function gwtAddress(){
+  return request.get("/address/list")
+}

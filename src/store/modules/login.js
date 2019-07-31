@@ -1,11 +1,12 @@
 import { observable, action } from "mobx";
-import {login,getCollectData} from '../../servicer';
+import {login,getCollectData,gwtAddress} from '../../servicer';
 import {setCookie} from "../../utils/index";
 
 export default class Login{
      // @observable 修饰属性
      @observable count = "";
      @observable CollectData = []; //收藏列表
+     @observable AddressList = [];
 
      @action btn(phone,pwd){
      login({mobile:phone,password:pwd}).then((res)=>{
@@ -24,6 +25,11 @@ export default class Login{
         const data = await getCollectData(params) 
         this.CollectData=data.data
        console.log(data.data)
+    }
+    @action async getAddressList() {
+        const data = await gwtAddress() 
+        this.AddressList=data.data
+       console.log(data)
     }
 
 }
