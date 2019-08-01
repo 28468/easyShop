@@ -21,6 +21,11 @@ export function addcars(params) {
   console.log(params)
   return request.post('/cart/add',params);
 }
+//获取购物车数量
 export function getNumber() {
   return request.get('/cart/goodscount');
+}
+//添加商品
+export function addCol(params) {
+  return request.post('/collect/addordelete',params);
 }

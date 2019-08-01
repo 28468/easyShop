@@ -1,0 +1,62 @@
+@import '../../../utils/common.scss';
+
+.sc-header{
+    width: 100%;
+    height: pxTorem(44px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 pxTorem(10px);
+    box-sizing: border-box;
+    p{
+        font-size: pxTorem(14px); 
+       }
+    border-bottom: 1px solid #cccccc;
+}
+.sc-con{
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    .sc-list{
+        width: 100%;
+        height: pxTorem(100px);
+      
+        dl{
+            display: flex;
+            dt{
+                margin-left: pxTorem(5px);
+                width: 40%;
+                height: pxTorem(80px);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd{
+               width: 60%;
+                height: pxTorem(80px);
+                padding: pxTorem(10px);
+             
+                h3{
+                    width: 100%;
+                    font-size: pxTorem(14px);
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                span{
+                    display: inline-block;
+                    color:#666;
+                    font-size: pxTorem(12px);
+                    padding: pxTorem(10px) 0;
+                        
+                }
+                p{
+                    color: red;
+                }
+               
+            }
+        }
+    }
+    
+}

@@ -99,3 +99,9 @@
         background: #1AB6F9
     }
 }
+
+.bg{
+    width: pxTorem(375px);
+    height: pxTorem(667px);
+    background: rgba($color: #000000, $alpha: 0.4)
+}

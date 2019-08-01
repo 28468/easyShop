@@ -21,6 +21,7 @@ class ListDetail extends Component {
         this.props.history.push({ pathname: `/classifylist/${window.localStorage.getItem('itemId')}` })
     }
     componentDidMount() {
+        this.props.classify.totalNum()
         console.log(this.props.match.params.id)
         this.props.classify.getDetailList(this.props.match.params.id)
         new Swiper(".banner", {
@@ -85,11 +86,12 @@ class ListDetail extends Component {
                 </div>
                 <div className="xq-footer">
                     <p>
-                        <i className='iconfont icon-weixuanzhong-01'></i>
+                        <i className='iconfont icon-weixuanzhong-01' id={this.props.classify.colcode==='add'?'acti':null} onClick = {()=>this.props.classify.addCollect()}></i>
                     </p>
                     <p>
                         <i className='iconfont icon-gouwuche' onClick={() =>  this.goCar()}></i>
                     </p>
+                    <span className='carNumber'>{this.props.classify.carNumber}</span>
 
                     <p className='gocar' onClick={() =>  this.props.classify.showDialog()}>加入购物车</p>
                     <p className='gobuy'>立即购买</p>

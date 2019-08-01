@@ -33,6 +33,7 @@ class ClassifyList extends Component {
             <div className='wrap'>
                 <div className="list-header">
                     <Link to='/classify' tag='i' className="iconfont icon-xiangzuo"> </Link>
+                    {/* <i className="iconfont icon-xiangzuo" onClick={()=>this.props.history.go(-1)}></i> */}
                     <p>奇趣分类</p>
                     <span></span>
                 </div>

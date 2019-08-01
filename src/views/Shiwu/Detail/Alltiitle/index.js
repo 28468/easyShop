@@ -13,15 +13,15 @@ class Alltiitle extends Component {
         this.props.topicList.gettopicss()//针对某个标题添加评论
 
     }
-    goaddtitles() {
-        this.props.history.push({ pathname: `/ztDetail/`})
-    }
+    // goaddtitles() {
+    //     this.props.history.push({ pathname: `/ztDetail/`})
+    // }
     render() {
         return (
             <div>
  <div className="lytitile">
             <div className="lytop">
-            <span onClick={() => this.goaddtitles()}  className="icon iconfont icon-xiangzuo"></span>
+            <span onClick={() => this.props.history.go(-1)}  className="icon iconfont icon-xiangzuo"></span>
             <span>查看更多评论</span>
             <span></span>
             </div>

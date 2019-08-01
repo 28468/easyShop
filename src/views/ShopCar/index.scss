@@ -38,6 +38,7 @@
     overflow: scroll;
 }
 .shopCar_item{
+    position: relative;
     display: flex;
     height: pxTorem(60px);
     padding: pxTorem(10px);
@@ -46,7 +47,7 @@
     border-bottom: 1px solid #ccc;
 }
 .shopCar_num{
-    font-size: pxTorem(14px);
+    font-size: pxTorem(13px);
     margin-left: pxTorem(30px)
 }
 .shopCar_item_img{
@@ -111,4 +112,33 @@
     background: #ab2b2b;
     color: #fff;
     font-size: pxTorem(14px)
+}
+
+.car-nums{
+    position: absolute;
+    right: pxTorem(15px);
+    bottom: pxTorem(10px);
+    width: pxTorem(80px);
+    height: pxTorem(20px);
+    div{
+       width: pxTorem(80px);
+       height: 100%;
+       display: flex;
+       border: pxTorem(1px) solid #cccccc;
+       span{
+           width: 32%;
+           font-size: pxTorem(12px);
+           text-align: center;
+           line-height: pxTorem(20px);
+           display: inline-block;
+       }
+       p{
+           text-align: center;
+           line-height: pxTorem(20px);
+           width: 33%;
+           border-left: pxTorem(1px) solid #cccccc;
+           border-right: pxTorem(1px) solid #cccccc;
+           font-size: pxTorem(12px);
+       }
+    }
 }

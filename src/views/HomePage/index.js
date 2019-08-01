@@ -12,6 +12,10 @@ class HomePage extends Component {
         super(props);
         this.state = {};
     }
+    goto = (item) => {
+ 
+        this.props.history.push({ pathname: `/classifylist/${item.id}`})
+    }
     componentDidMount() {
         this.props.homePage.gethomelist()
         new Swiper(".banner", {
@@ -19,6 +23,18 @@ class HomePage extends Component {
             loop: true
         });
 
+    }
+    goaddtitle(id) {
+        this.props.history.push({ pathname: `/Homedetail/${id}`, params: id })
+     
+    }
+    goaddtitles(id) {
+        this.props.history.push({ pathname: `/listDetail/${id}`, params: id })
+        
+    }
+    goaddtitless(id) {
+        this.props.history.push({ pathname: `/listDetail/${id}`, params: id })
+       
     }
     render() {
         console.log(this.props.homePage.gethomeL)
@@ -44,7 +60,7 @@ class HomePage extends Component {
                     <div className="listOne">
                         {
                             this.props.homePage.gethomeL.channel && this.props.homePage.gethomeL.channel.map((item, index) => {
-                                return <dl key={index}>
+                                return <dl key={index} onClick={() => this.goto(item)}>
                                     <dt> <img src={item.icon_url} alt="" /></dt>
                                     <dd>{item.name}</dd>
                                 </dl>
@@ -58,7 +74,7 @@ class HomePage extends Component {
                         <div className="syyouhui">
                             {
                                 this.props.homePage.gethomeL.brandList && this.props.homePage.gethomeL.brandList.map((item, index) => {
-                                    return <dl key={index}>
+                                    return <dl key={index} onClick={() => this.goaddtitle(item.id)}>
                                         <dt>{item.name}</dt>
                                         <dd><img src={item.new_pic_url} alt="" /></dd>
                                     </dl>
@@ -75,7 +91,7 @@ class HomePage extends Component {
 
                             {
                                 this.props.homePage.gethomeL.newGoodsList && this.props.homePage.gethomeL.newGoodsList.map((item, index) => {
-                                    return <dl key={index}>
+                                    return <dl key={index} onClick={() => this.goaddtitles(item.id)}>
                                         <dt><img src={item.list_pic_url} alt="" /></dt>
                                         <dd>{item.name}</dd>
                                         <b>￥36元</b>
@@ -97,7 +113,7 @@ class HomePage extends Component {
                                             <div className="sy_left">
                                                 <img src={item.list_pic_url} alt="" />
                                             </div>
-                                            <div className="sy_right">
+                                            <div className="sy_right" onClick={() => this.goaddtitless(item.id)}>
                                                 <p>{item.name}</p>
                                                 <p>{item.goods_brief}</p>
                                                 <p>￥{item.retail_price}</p>

@@ -135,8 +135,9 @@ margin: 0 auto;
             margin-top: pxTorem(-10px);
         }
         b{
+            display: inline-block;
             color: red;
-            margin-top: pxTorem(5px);
+            margin-top: pxTorem(10px);
         }
       }
     
@@ -145,7 +146,7 @@ margin: 0 auto;
 .syrenqi{
     width: 100%;
     border-top: pxTorem(5px) solid #eee;
-    margin-top: pxTorem(35px);
+    margin-top: pxTorem(45px);
     .sytop{
         display: inline-block;
         width: 100%;

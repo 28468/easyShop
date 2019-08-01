@@ -1,0 +1,76 @@
+@import '../../../utils/mixin';
+@import '../../../utils/common.scss';
+
+
+.hometitile{
+    width: 100%;
+    height: 100%;
+ overflow-y: scroll;    
+ .homeposww{
+  width: 100%;
+  height:  pxTorem(300px);
+  .hometop{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size:  pxTorem(15px);
+    height:  pxTorem(30px);
+    line-height:  pxTorem(30px);
+   border: 1px solid #ccc;
+
+  span{
+    font-size:  pxTorem(15px);
+  }
+}.homedetail{
+  width: 100%;
+  dl{
+    dt{
+      width: 100%;
+      height: pxTorem(180px);
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd{
+      width: 100%;
+      text-align: center;
+      margin-top: pxTorem(20px);
+      color: #808080;
+    }
+  }
+}
+ }
+    
+    
+    .homepostlist{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: center;
+      
+      dl{
+        width: 50%;
+        dt{
+          width: 100%;
+          height: pxTorem(130px);
+          img{
+            width: 100%;
+            height: 100%;
+          }
+      }
+      dd{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+    }
+    p{
+      margin-top: pxTorem(10px);
+      color: red;
+    }
+}
+}
