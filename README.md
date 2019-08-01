@@ -53,7 +53,7 @@ npm run build
 开发时长：编码一周
 ````
 
-<h2>5.项目截图</h2>
+<h2>6.项目截图</h2>
 
 
 ![git-image](git-image/img1.png)
