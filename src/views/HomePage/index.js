@@ -26,7 +26,7 @@ class HomePage extends Component {
     }
     goaddtitle(id) {
         this.props.history.push({ pathname: `/Homedetail/${id}`, params: id })
-     
+    
     }
     goaddtitles(id) {
         this.props.history.push({ pathname: `/listDetail/${id}`, params: id })
