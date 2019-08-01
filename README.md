@@ -65,10 +65,14 @@ npm run build
 <h2>5.项目截图</h2>
 
 
-<<<<<<< HEAD
-![tool-manager](./img/img1.png)
-![tool-manager](./img/img2.png)
-
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
->>>>>>> e0abe9059468ff996438d0c6735d98d0a151f089
+![git-image](git-image/img1.png)
+![git-image](git-image/img2.png)
+![git-image](git-image/img3.png)
+![git-image](git-image/img4.png)
+![git-image](git-image/img5.png)
+![git-image](git-image/img6.png)
+![git-image](git-image/img7.png)
+![git-image](git-image/img8.png)
+![git-image](git-image/img9.png)
+![git-image](git-image/img10.png)
 
