@@ -1,0 +1,103 @@
+@import '../../../utils/common.scss';
+.search-header{
+    width: 100%;
+    height: pxTorem(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: pxTorem(10px);
+    box-sizing: border-box;
+    border-bottom: pxTorem(1px) solid #eee;
+    background: #ffffff;
+    div{
+        width: 70%;
+        height: pxTorem(32px);
+        line-height: pxTorem(32px);
+        background: #F5F5F9;
+        display: flex;
+        font-size: pxTorem(11px);
+        i{
+            font-size: pxTorem(14px);
+            margin: 0 pxTorem(5px);
+        
+        }
+    }
+}
+.search-main-top,.search-main-con{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    .del{
+    width: 100%;
+    height: pxTorem(30px);
+    display: flex;
+     justify-content: space-between;
+     padding: 0 pxTorem(10px);
+     box-sizing: border-box;
+     align-items: center;
+     i{
+         color: #666666
+     }
+    }
+    .jilu{
+        width: 100%;
+        height: auto;
+        padding-bottom: pxTorem(10px);
+        display: flex;
+        flex-wrap: wrap;
+        p{
+            width: auto;
+            height: pxTorem(15px);
+            border: 1px solid #cccccc;
+            border-radius: pxTorem(5px);
+            padding: pxTorem(5px);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin-left: pxTorem(15px);
+            margin-top: pxTorem(5px);
+        }
+    }
+}
+.red{
+    border: pxTorem(1px) solid red !important;
+ }
+ .search-sort{
+     width: 100%;
+     height: pxTorem(40px);
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     border-bottom: pxTorem(2px) solid #eeeeee;
+ }
+ .search-list{
+     overflow-y: auto;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+        width: 49%;
+        height: pxTorem(140px);
+        border: pxTorem(0.5px) solid #eeeeee;
+        border-right: 0;
+        margin-left: pxTorem(1px);
+        font-size: pxTorem(11px);
+        text-align: center;
+        img{
+            width: 80%;
+            height: pxTorem(100px);
+        }
+        p{
+            padding: 0 pxTorem(15px);
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+       span{
+            color: red;
+        }
+    }
+}

@@ -14,6 +14,8 @@
         height:  pxTorem(30px);
         line-height:  pxTorem(30px);
       border: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
         span{
             display: inline-block;
          
@@ -42,12 +44,23 @@
             
           }
         }
+        .xxbox{
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            div{
+                font-size:  pxTorem(11px);
+            }
+           
+        }
+       
         .xxliuy{
             width: 100%;
             display: flex;
-            justify-content: space-between;
-               border-bottom: 1px solid #ccc;
+            justify-content: space-between;        
           padding:  pxTorem(15px) 0;
+          .xxpinglun{
+            font-size:  pxTorem(10px);
+        }
         }
         p{
             text-align: center;

@@ -45,6 +45,7 @@ export default class Car{
         item.checked = 0
       })
       
+      
       if(!this.flags){
       
         const datas = await getShopCar(); 

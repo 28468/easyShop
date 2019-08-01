@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-
-
 import './Shiwu.scss'
 @inject('topicList')
 @observer
@@ -16,7 +14,7 @@ class Shiwu extends Component {
     componentDidMount() {
         this.props.topicList.getoplist()//获取专题
         this.props.topicList.getrelateds()//获取专题详情
-        this.props.topicList.getcommentlists()////根据专题ID或者商品ID获取评论获取相关专题
+    
 
     }
     render() {

@@ -24,7 +24,7 @@ class Classify extends Component {
         return (
             <div className='wrap'>
                 <div className="fl-header">
-                    <div>
+                    <div onClick={()=>this.props.history.push('/ClassifySearch')}>
                         <i className="iconfont icon-fangdajing"></i>
                         <p>搜索商品，共21458款好物</p>
                     </div>

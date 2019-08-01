@@ -9,68 +9,91 @@ import ClassifyList from '../views/Classify/ClassifyList'//分类列表
 import ListDetail from '../views/Classify/ClassifyList/ListDetail'//列表详情
 import ZtDetail from '../views/Shiwu/Detail'//专题详情
 import Collect from '../views/Wode/Collect'//收藏
-import Address from  '../views/Wode/Address'//地址
+import Address from '../views/Wode/Address'//地址
 import AddressDetail from '../views/Wode/Address/AddressDetail'
-
+import Addpltitles from '../views/Shiwu/Detail/Addpltitle'//专题详情
+import Alltiitle from '../views/Shiwu/Detail/Alltiitle'//专题详情
+import ClassifySearch from '../views/Classify/ClassifySearch'//搜索
+import Homedetail from '../views/HomePage/Homedetail'
 const route = [
     {
-        path:'/login',
-        component:Login,
+        path: '/login',
+        component: Login,
+    },
+    {
+        path: '/Homedetail/:id',
+        component: Homedetail,
     },
     {   //分类列表
-        path:'/classifylist/:id',
-        component:ClassifyList,
+        path: '/classifylist/:id',
+        component: ClassifyList,
+    },
+    {   //搜索
+        path: '/ClassifySearch',
+        component: ClassifySearch,
     },
     {   //列表详情
-        path:'/listDetail/:id',
-        component:ListDetail,
+        path: '/listDetail/:id',
+        component: ListDetail,
     },  //专题详情
-    {   path:'/ztDetail/:id',
-        component:ZtDetail,
-    },
-    {   path:'/collect',
-        component:Collect,
-    },
-    {   path:'/address',
-        component:Address,
+    {
+        path: '/ztDetail/:id',
+        component: ZtDetail,
     },
     {
-        path:'/addressDetail',
-        component:AddressDetail,
+        path: '/collect',
+        component: Collect,
     },
     {
-        path:'/',
-        component:Home,
-        children:[
+        path: '/address',
+        component: Address,
+    },
+    {
+        path: '/addressDetail',
+        component: AddressDetail,
+    },
+
+    {
+        path: '/Addpltitles',
+        component: Addpltitles,
+    },
+    {
+        path: '/Alltiitle',
+        component: Alltiitle,
+    },
+    {
+        path: '/',
+        component: Home,
+        children: [
             {
-                path:'/HomePage',
-                component:HomePage,
-                
+                path: '/HomePage',
+                component: HomePage,
+
             },
             {
-                path:'/classify',
-                component:Classify,
-                
+                path: '/classify',
+                component: Classify,
+
             },
             {
-                path:'/subject',
-                component:Shiwu,              
+                path: '/subject',
+                component: Shiwu,
             },
             {
-                path:'/shopCar',
-                component:ShopCar,
-            
-                
+                path: '/shopCar',
+                component: ShopCar,
+
+
             },
             {
-                path:'/wode',
-                component:Wode,
-                flag:true,
-                
+                path: '/wode',
+                component: Wode,
+                flag: true,
+
             },
             {
-                from:'/',
-                to:'/HomePage'
+                from: '/',
+                to: '/HomePage'
             }
         ]
     }

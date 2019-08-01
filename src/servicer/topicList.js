@@ -15,7 +15,7 @@ export function getrelated() {
 export function getcommentlist() {
   return request.get('/comment/list?valueId=314&typeId=1&size=5&page=1');
 }
-/* //针对某个标题添加评论
+//针对某个标题添加评论
 export function gettopic() {
-  return request.get('/topic/related?id=300');
-} */
+  return request.post('/api/comment/list?valueId=313&typeId=1&size=100&page=1');
+  }
