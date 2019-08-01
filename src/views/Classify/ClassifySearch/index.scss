@@ -64,7 +64,14 @@
 .red{
     border: pxTorem(1px) solid red !important;
  }
+ .a{
+    overflow-y: auto;
+ }
  .search-sort{
+     position: fixed;
+     left: 0;
+     top: pxTorem(39px);
+     background: #F5F5F9;;
      width: 100%;
      height: pxTorem(40px);
      display: flex;
@@ -73,11 +80,12 @@
      border-bottom: pxTorem(2px) solid #eeeeee;
  }
  .search-list{
-     overflow-y: auto;
+ 
     width: 100%;
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    margin-top: pxTorem(50px);
     .item{
         width: 49%;
         height: pxTorem(140px);

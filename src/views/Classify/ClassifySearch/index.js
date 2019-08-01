@@ -11,7 +11,8 @@ class ClassifySearch extends Component {
         super(props);
         this.state = {
             title: '',
-            flag: true
+            flag: true,
+            flags: false
         };
     }
     changeValue(e) {
@@ -22,8 +23,30 @@ class ClassifySearch extends Component {
             title: e.target.value
         })
     }
-    componentDidMount(){
+    goTo = (keyword) => {
+        console.log(keyword)
+        let params = {
+            keyword: keyword,
+            page: 1,
+            size: 100,
+            sort: 'id',
+            order: 'desc',
+            categoryId: 0
+        }
+        this.props.search.getList(params)
+        this.setState({
+            flag: false,
+        })
+        this.setState({
+            flags: true,
+        })
+    }
+    componentDidMount() {
         this.props.search.getSearchs()
+    }
+    goDetail = (id) => {
+        console.log(id)
+         this.props.history.push({ pathname: `/listDetail/${id}`})
     }
     render() {
         return (
@@ -41,12 +64,12 @@ class ClassifySearch extends Component {
                         <div className='del'><p>历史记录</p> <i className='iconfont icon-lajitong'></i></div>
                         <div className="jilu">
                             {
-                                this.props.search.historyKeywordList && this.props.search.historyKeywordList.map((item,index)=>{
+                                this.props.search.historyKeywordList && this.props.search.historyKeywordList.map((item, index) => {
                                     return <p key={index}>{item}</p>
                                 })
                             }
 
-                            
+
                         </div>
                     </div>) : (null)
                 }
@@ -56,54 +79,40 @@ class ClassifySearch extends Component {
                         <div className="jilu">
                             <p className='red'>母亲节</p>
                             {
-                                this.props.search.hotKeywordList && this.props.search.hotKeywordList.map((item,index)=>{
-                                    return <p key={index}>{item.keyword}</p>
+                                this.props.search.hotKeywordList && this.props.search.hotKeywordList.map((item, index) => {
+                                    return <p key={index} onClick={() => this.goTo(item.keyword)}>{item.keyword}</p>
                                 })
                             }
                         </div>
                     </div>) : (null)
                 }
 
-                {/* <div className="search-sort">
-                    <p>综合</p>
-                    <p>价格</p>
-                    <p>全部分类</p>
-                </div>
-                <div className="search-list">
-                    <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>
-                    <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>
-                    <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>
-                    <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>  <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>  <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>
-                    <div className="item"  >
-                        <img src='http://yanxuan.nosdn.127.net/ad953e16ad8c33b714e7af941ce8cd56.png' alt="" />
-                        <p>这是一个大面包</p>
-                        <span>￥559</span>
-                    </div>
-                </div> */}
+                {
+                    this.state.flags ? (
+
+                        <div className='a'>
+                            <div className="search-sort">
+                                <p>综合</p>
+                                <p onClick={()=>this.props.search.sort()}>价格</p>
+                                <p>全部分类</p>
+                            </div>
+                            <div className="search-list">
+                                {
+                                    this.props.search.SearchList && this.props.search.SearchList.map((item) => {
+                                        return <div className="item" key={item.id} onClick={() => this.goDetail(item.id)}>
+                                                    <img src={item.list_pic_url} alt="" />
+                                                    <p>{item.name}</p>
+                                                    <span>￥{item.retail_price}</span>
+                                               </div>
+
+
+                                    })
+                                }
+                            </div>
+                        </div>
+                    ) : (null)
+                }
+
 
             </div>
         );
