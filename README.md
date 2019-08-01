@@ -66,4 +66,5 @@ npm run build
 
 ````
 ![tool-manager](./img/img1.png)
+![tool-manager](./img/img2.png)
 ````
