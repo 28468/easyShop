@@ -65,6 +65,10 @@ npm run build
 <h2>5.项目截图</h2>
 
 ````
+<<<<<<< HEAD
 ![tool-manager](./img/img1.png)
 ![tool-manager](./img/img2.png)
+=======
+![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+>>>>>>> e0abe9059468ff996438d0c6735d98d0a151f089
 ````
